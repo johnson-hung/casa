@@ -1,0 +1,177 @@
+Using the default profile...
+Feature: display list of movies sorted by different criteria
+  As an avid moviegoer
+  So that I can quickly browse movies based on my preferences
+  I want to see movies sorted by title or release date
+
+  Background: movies have been added to database # features/sort_movie_list.feature:7
+    Given the following movies exist:            # features/step_definitions/movies_steps.rb:2
+      | title                   | rating | release_date |
+      | Aladdin                 | G      | 25-Nov-1992  |
+      | The Terminator          | R      | 26-Oct-1984  |
+      | When Harry Met Sally    | R      | 21-Jul-1989  |
+      | The Help                | PG-13  | 10-Aug-2011  |
+      | Chocolat                | PG-13  | 5-Jan-2001   |
+      | Amelie                  | R      | 25-Apr-2001  |
+      | 2001: A Space Odyssey   | G      | 6-Apr-1968   |
+      | The Incredibles         | PG     | 5-Nov-2004   |
+      | Raiders of the Lost Ark | PG     | 12-Jun-1981  |
+      | Chicken Run             | G      | 21-Jun-2000  |
+    And I am on the RottenPotatoes home page     # features/step_definitions/web_steps.rb:44
+    Then 10 seed movies should exist             # features/step_definitions/movies_steps.rb:24
+
+  Scenario: sort movies alphabetically                         # features/sort_movie_list.feature:25
+    When I follow "Movie Title"                                # features/step_definitions/web_steps.rb:56
+      # your steps here
+    Then I should see "2001: A Space Odyssey" before "Aladdin" # features/step_definitions/movies_steps.rb:8
+    Then I should see "Aladdin" before "Amelie"                # features/step_definitions/movies_steps.rb:8
+    Then I should see "Chicken Run" before "Chocolat"          # features/step_definitions/movies_steps.rb:8
+    Then I should see "The Help" before "The Incredibles"      # features/step_definitions/movies_steps.rb:8
+
+  Scenario: sort movies in increasing order of release date                                          # features/sort_movie_list.feature:33
+    When I follow "Release Date"                                                                     # features/step_definitions/web_steps.rb:56
+      # your steps here
+    Then I should see "More about 2001: A Space Odyssey" before "More about Raiders of the Lost Ark" # features/step_definitions/movies_steps.rb:8
+    Then I should see "More about The Terminator" before "More about When Harry Met Sally"           # features/step_definitions/movies_steps.rb:8
+    Then I should see "More about Aladdin" before "More about Chicken Run"                           # features/step_definitions/movies_steps.rb:8
+    Then I should see "More about Raiders of the Lost Ark" before "More about Chocolat"              # features/step_definitions/movies_steps.rb:8
+
+  Scenario: filter and sort a movie by release date                                    # features/sort_movie_list.feature:42
+    Given I am on the home page                                                        # features/step_definitions/web_steps.rb:44
+    When I uncheck the following ratings: PG-13, NC-17, R                              # features/step_definitions/movies_steps.rb:18
+    And I should see "Aladdin"                                                         # features/step_definitions/web_steps.rb:105
+    When I follow "Release Date"                                                       # features/step_definitions/web_steps.rb:56
+    Then I should see "Raiders of the Lost Ark" before "Aladdin"                       # features/step_definitions/movies_steps.rb:8
+    When I follow "Release Date"                                                       # features/step_definitions/web_steps.rb:56
+    Then I should see "More about Raiders of the Lost Ark" before "More about Aladdin" # features/step_definitions/movies_steps.rb:8
+
+3 scenarios (3 passed)
+26 steps (26 passed)
+0m0.439s
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 56 / 59 LOC (94.92%) covered.
+Using the default profile...
+Feature: display list of movies filtered by MPAA rating
+  As a concerned parent
+  So that I can quickly browse movies appropriate for my family
+  I want to see movies matching only certain MPAA ratings
+
+  Background: movies have been added to database # features/filter_movie_list.feature:7
+    Given the following movies exist:            # features/step_definitions/movies_steps.rb:2
+      | title                   | rating | release_date |
+      | Aladdin                 | G      | 25-Nov-1992  |
+      | The Terminator          | R      | 26-Oct-1984  |
+      | When Harry Met Sally    | R      | 21-Jul-1989  |
+      | The Help                | PG-13  | 10-Aug-2011  |
+      | Chocolat                | PG-13  | 5-Jan-2001   |
+      | Amelie                  | R      | 25-Apr-2001  |
+      | 2001: A Space Odyssey   | G      | 6-Apr-1968   |
+      | The Incredibles         | PG     | 5-Nov-2004   |
+      | Raiders of the Lost Ark | PG     | 12-Jun-1981  |
+      | Chicken Run             | G      | 21-Jun-2000  |
+    And I am on the RottenPotatoes home page     # features/step_definitions/web_steps.rb:44
+    Then 10 seed movies should exist             # features/step_definitions/movies_steps.rb:24
+
+  Scenario: restrict to movies with 'PG' or 'R' ratings                     # features/filter_movie_list.feature:25
+      # enter step(s) to check the 'PG' and 'R' checkboxes
+      # enter step(s) to uncheck all other checkboxes
+    Given I am on the home page                                             # features/step_definitions/web_steps.rb:44
+    When I uncheck the following ratings: G, NC-17, PG-13                   # features/step_definitions/movies_steps.rb:18
+      # enter step to "submit" the search form on the homepage
+    And I press "Refresh" button                                            # features/step_definitions/movies_steps.rb:14
+      # enter step(s) to ensure that PG and R movies are visible
+    Then I should see the following movies: Raiders of the Lost Ark, Amelie # features/step_definitions/movies_steps.rb:28
+      # enter step(s) to ensure that other movies are not visible
+    And I should not see the following movies: Aladdin, Chicken Run         # features/step_definitions/movies_steps.rb:28
+
+  Scenario: restrict to movies with 'G', 'PG-13' or 'R' ratings                                                                       # features/filter_movie_list.feature:42
+      # enter step(s) to check the 'PG' and 'R' checkboxes
+      # enter step(s) to uncheck all other checkboxes
+    Given I am on the home page                                                                                                       # features/step_definitions/web_steps.rb:44
+    When I uncheck the following ratings: PG, R                                                                                       # features/step_definitions/movies_steps.rb:18
+      # enter step to "submit" the search form on the homepage
+    And I press "Refresh" button                                                                                                      # features/step_definitions/movies_steps.rb:14
+      # enter step(s) to ensure that PG and R movies are visible
+    Then I should see the following movies: 2001: A Space Odyssey, Aladdin, Chicken Run, Chocolat, The Help                           # features/step_definitions/movies_steps.rb:28
+      # enter step(s) to ensure that other movies are not visible
+    And I should not see the following movies: Raiders of the Lost Ark, The Terminator, When Harry Met Sally, Amelie, The Incredibles # features/step_definitions/movies_steps.rb:28
+
+  Scenario: all ratings selected                               # features/filter_movie_list.feature:59
+      # see assignment
+    Given I am on the home page                                # features/step_definitions/web_steps.rb:44
+    When I check the following ratings: G, PG, PG-13, NC-17, R # features/step_definitions/movies_steps.rb:18
+    And I press "Refresh" button                               # features/step_definitions/movies_steps.rb:14
+    Then I should see all the movies                           # features/step_definitions/movies_steps.rb:39
+
+3 scenarios (3 passed)
+23 steps (23 passed)
+0m0.604s
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 54 / 59 LOC (91.53%) covered.
+Using the default profile...
+Feature: search for movies by director
+  As a movie buff
+  So that I can find movies with my favorite director
+  I want to include and search on director information in movies I enter
+
+  Background: movies in database      # features/movies_by_director.feature:7
+    Given the following movies exist: # features/step_definitions/movies_steps.rb:2
+      | title        | rating | director     | release_date |
+      | Star Wars    | PG     | George Lucas | 1977-05-25   |
+      | Blade Runner | PG     | Ridley Scott | 1982-06-25   |
+      | Alien        | R      |              | 1979-05-25   |
+      | THX-1138     | R      | George Lucas | 1971-03-11   |
+
+  Scenario: add a new movie                   # features/movies_by_director.feature:18
+    When I am on the RottenPotatoes home page # features/step_definitions/web_steps.rb:44
+    When I follow "Add new movie"             # features/step_definitions/web_steps.rb:56
+    And I fill in "Title" with "A cool movie" # features/step_definitions/web_steps.rb:60
+    And I select "G" from "Rating"            # features/step_definitions/web_steps.rb:85
+    And I press "Save Changes"                # features/step_definitions/web_steps.rb:52
+    When I am on the RottenPotatoes home page # features/step_definitions/web_steps.rb:44
+    Then I should see "A cool movie"          # features/step_definitions/web_steps.rb:105
+
+  Scenario: add director to existing movie                # features/movies_by_director.feature:29
+    When I go to the edit page for "Alien"                # features/step_definitions/web_steps.rb:48
+    And I fill in "Director" with "Ridley Scott"          # features/step_definitions/web_steps.rb:60
+    And I press "Update Movie Info"                       # features/step_definitions/web_steps.rb:52
+    Then the director of "Alien" should be "Ridley Scott" # features/step_definitions/movies_steps.rb:46
+
+  Scenario: change director name                      # features/movies_by_director.feature:36
+    When I go to the edit page for "Alien"            # features/step_definitions/web_steps.rb:48
+    And I fill in "Director" with "Peter Wu"          # features/step_definitions/web_steps.rb:60
+    And I press "Update Movie Info"                   # features/step_definitions/web_steps.rb:52
+    Then the director of "Alien" should be "Peter Wu" # features/step_definitions/movies_steps.rb:46
+
+  Scenario: delete director name                # features/movies_by_director.feature:42
+    When I go to the edit page for "Alien"      # features/step_definitions/web_steps.rb:48
+    And I fill in "Director" with "''"          # features/step_definitions/web_steps.rb:60
+    And I press "Update Movie Info"             # features/step_definitions/web_steps.rb:52
+    Then the director of "Alien" should be "''" # features/step_definitions/movies_steps.rb:46
+
+  Scenario: find movie with same director                       # features/movies_by_director.feature:48
+    Given I am on the details page for "Star Wars"              # features/step_definitions/web_steps.rb:44
+    When I follow "Find Movies With Same Director"              # features/step_definitions/web_steps.rb:56
+    Then I should be on the Similar Movies page for "Star Wars" # features/step_definitions/web_steps.rb:230
+    And I should see "THX-1138"                                 # features/step_definitions/web_steps.rb:105
+    But I should not see "Blade Runner"                         # features/step_definitions/web_steps.rb:123
+
+  Scenario: add director to existing movie and find movie with the same director # features/movies_by_director.feature:55
+    When I go to the edit page for "Alien"                                       # features/step_definitions/web_steps.rb:48
+    And I fill in "Director" with "Ridley Scott"                                 # features/step_definitions/web_steps.rb:60
+    And I press "Update Movie Info"                                              # features/step_definitions/web_steps.rb:52
+    Given I am on the details page for "Alien"                                   # features/step_definitions/web_steps.rb:44
+    When I follow "Find Movies With Same Director"                               # features/step_definitions/web_steps.rb:56
+    Then I should be on the Similar Movies page for "Alien"                      # features/step_definitions/web_steps.rb:230
+    And I should see "Blade Runner"                                              # features/step_definitions/web_steps.rb:105
+    But I should not see "Star Wars"                                             # features/step_definitions/web_steps.rb:123
+
+  Scenario: can't find similar movies if we don't know director (sad path) # features/movies_by_director.feature:66
+    Given I am on the details page for "Alien"                             # features/step_definitions/web_steps.rb:44
+    Then I should not see "Ridley Scott"                                   # features/step_definitions/web_steps.rb:123
+    When I follow "Find Movies With Same Director"                         # features/step_definitions/web_steps.rb:56
+    Then I should be on the home page                                      # features/step_definitions/web_steps.rb:230
+    And I should see "'Alien' has no director info"                        # features/step_definitions/web_steps.rb:105
+
+7 scenarios (7 passed)
+44 steps (44 passed)
+0m0.699s
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 51 / 59 LOC (86.44%) covered.
