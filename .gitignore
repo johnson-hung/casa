@@ -1,0 +1,2 @@
+# Ignore certain files that may transfer over
+.DS_Store # this one from Mac folders
