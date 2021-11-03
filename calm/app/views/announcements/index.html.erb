@@ -1,0 +1,55 @@
+<!--  This file is app/views/announcements/index.html.erb -->
+<p>
+  <%= flash[:alert] if flash[:alert] %>
+  <%= link_to 'Home', root_path %>
+</p>
+
+<p align="right">
+  <%= link_to 'Post an announcement', new_announcement_path, :class => 'btn btn-primary pull-right' %>
+  <%= link_to 'Login', root_path, :class => 'btn btn-primary pull-right disabled' %>
+  <%= link_to 'Signup', root_path, :class => 'btn btn-primary pull-right disabled' %>
+</p>
+
+<h2>Announcement</h2>
+
+<%= form_tag announcements_path, :method => :get, :id => 'ratings_form' do %>
+  <%= hidden_field_tag "title_sort", true if @title_header %>
+  <%= hidden_field_tag ":release_date_sort", true if @date_header %>
+<% end %>
+
+<table class="table table-striped col-md-12" id="announcements">
+  <thead>
+    <tr>
+      <th class="<%= @title_header %>">
+        <%= link_to 'Title', announcements_path(:sort => 'title', :ratings => @selected_ratings), :id => 'title_header' %>
+      </th>
+      <th>Author</th> 
+      <th class="<%= @date_header %>">
+        <%= link_to 'Time posted', announcements_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header' %>
+      </th>
+      <th>More Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @announcements.each do |announcement| %>
+      <tr>
+        <td>
+          <%= announcement.title %>
+        </td>
+        <td>
+          <%= announcement.author %>
+        </td>
+        <td>
+          <%= announcement.release_date %>
+        </td>
+        <td>
+          <%= link_to "More about #{announcement.title}", announcement_path(announcement) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h2>Something else</h2>
+  <%= text_field :announcement, :title, :class => 'form-control' %>

@@ -1,0 +1,20 @@
+<h2>Edit Existing Announcement</h2>
+<%= form_tag announcement_path(@announcement), :method => :put do %>
+  <%= label :announcement, :title, 'Title', :class => 'col-form-label' %>
+  <%= text_field :announcement, 'title', :class => 'form-control' %>
+  
+  <%= label :announcement, :author, 'Author', :class => 'col-form-label' %>
+  <%= text_field :announcement, 'author', :class => 'form-control' %>
+  
+  <%= label :announcement, :rating, 'Rating', :class => 'col-form-label'  %>
+  <%= select :announcement, :rating, ['G','PG','PG-13','R','NC-17'], {}, {:class => 'form-control col-1'} %>
+
+  <%= label :announcement, :description, 'Content', :class => 'col-form-label' %>
+  <%= text_field :announcement, :description, :class => 'form-control' %>
+  
+  <%= label :announcement, :release_date, 'Released On', :class => 'col-form-label'  %>
+  <%= date_select :announcement, :release_date, {}, :class => 'form-control col-2 d-inline' %>
+  <br/>
+  <%= submit_tag 'Update Announcement Info', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', announcements_path, :class => 'btn btn-secondary' %>
+<% end %>

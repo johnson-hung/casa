@@ -1,0 +1,28 @@
+<!--  app/views/announcements/show.html.erb -->
+<h2>Details about <em><%= @announcement.title %></em></h2>
+
+<ul id="details">
+  <li>
+    Rating:
+    <%= @announcement.rating %>
+  </li>
+  <li>
+    Author:
+    <%= @announcement.author %>
+  </li>
+  <li>
+    Released on:
+    <%= @announcement.release_date.strftime("%B %d, %Y") %>
+  </li>
+</ul>
+
+<h3>Description:</h3>
+<p id="description">
+  <%= @announcement.description %>
+</p>
+
+<div class="row">
+  <%= link_to 'Edit', edit_announcement_path(@announcement), :class => 'btn btn-primary col-2' %>
+  <%= link_to 'Delete', announcement_path(@announcement), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %>
+  <%= link_to 'Back to announcement list', announcements_path, :class => 'btn btn-primary col-2' %>
+</div>
