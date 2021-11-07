@@ -1,0 +1,57 @@
+<h2>User Sign Up</h2>
+
+<% if flash[:alert] %>
+  <% flash[:alert].each do |message| %>
+    <%= message%> <br>
+  <% end %>
+<% end %>
+
+<%= form_tag signup_path(@user), :class => 'form' do %>
+  <%= label :user, :account_name, 'User Name', :class => 'col-form-label' %>
+  <%= text_field :user, :account_name, :class => 'form-control' %>
+  
+  <%= label :user, :password, 'Password', :class => 'col-form-label' %>
+  <%= text_field :user, :password, :class => 'form-control' %>
+  
+  <%= label :user, :password_confirmation, 'Password Confirmation', :class => 'col-form-label' %>
+  <%= text_field :user, :password_confirmation, :class => 'form-control' %>
+  
+  <%= label :user, :first_name, 'First Name', :class => 'col-form-label' %>
+  <%= text_field :user, :first_name, :class => 'form-control' %>
+  
+  <%= label :user, :last_name, 'Last Name', :class => 'col-form-label' %>
+  <%= text_field :user, :last_name, :class => 'form-control' %>
+  
+  <%= label :user, :organization, 'University/ Company', :class => 'col-form-label' %>
+  <%= text_field :user, :organization, :class => 'form-control' %>
+  
+  <%= label :user, :email, 'Email', :class => 'col-form-label' %>
+  <%= text_field :user, :email, :class => 'form-control' %>
+  
+  <%= label :user, :phone, 'Phone', :class => 'col-form-label' %>
+  <%= text_field :user, :phone, :class => 'form-control' %>
+ 
+  
+  <%= label :user, :research_interests, 'Reasarch Insterests', :class => 'col-form-label'  %>
+  <br/>
+  <%= label :user, :research_interests, 'high performance computing'%>
+  <%= check_box_tag "high performance computing", "1"%>
+  
+  <%= label :user, :research_interests, 'machine learning'%>
+  <%= check_box_tag "machine learning", "1"%>
+  
+  <%= label :user, :research_interests, 'operating system'%>
+  <%= check_box_tag "operating system", "1"%>
+
+ <br/>
+  
+  <%= label :user, :mentor, 'Mentor', :class => 'col-form-label'%>
+  <%= check_box_tag "mentor", "1"%>
+  
+  <%= label :user, :mentee, 'Mentee'%>
+  <%= check_box_tag "mentee", "1"%>
+  
+  <br/>
+  <%= submit_tag 'Submit', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', announcements_path, :class => 'btn btn-secondary' %>
+<% end %>
