@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.6.6', '< 2.7.0'
 gem 'rails', '4.2.10'
+gem 'bcrypt', '~> 3.1.16'
 
 group :development, :test do
   gem 'factory_bot_rails'
@@ -33,4 +34,3 @@ end
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
-gem 'bcrypt'

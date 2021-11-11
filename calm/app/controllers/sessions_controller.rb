@@ -3,21 +3,18 @@ class SessionsController < ApplicationController
         @user = User.new
     end
     
+    
     def create
-        #@user = User.find_by_emails(params[:session][:email]) #deprecated (https://stackoverflow.com/questions/23195203/ruby-on-rails-undefined-method-find-by-email)
-        @user = User.find_by email: params[:session][:email] #not sure why this doesn't work
-        if @user && @user.authenticate(params[:user][:password])
+        @user = User.find_by(email: params[:session][:email])
+        if @user && @user.authenticate(params[:session][:password])
             session[:user_id] = @user.id
+            flash[:notice] = 'Login successful'
             redirect_to '/'
         else
-            redirect_to 'login'
+            flash.now[:notice] = 'Invalid user/password combination'
+            render 'new'
         end
     end
     
     
-    def destroy
-        session[:user_id] = nil
-        redirect_to '/'
-    end
-
 end
