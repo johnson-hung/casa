@@ -1,2 +1,10 @@
 # Ignore certain files that may transfer over
 .DS_Store # this one from Mac folders
+
+# Ignore all logfiles and tempfiles.
+calm/log/*
+calm/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+
