@@ -4,7 +4,9 @@ CALM::Application.routes.draw do
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
-
+  
+  delete 'logout', to: 'sessions#destroy'
+  
   resources :announcements
   # map '/' to be a redirect to '/announcements'
   root :to => redirect('/announcements')

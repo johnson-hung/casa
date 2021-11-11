@@ -653,3 +653,508 @@ Processing by AnnouncementsController#index as HTML
   Rendered announcements/index.html.erb within layouts/application (2.7ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:13:29 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:13:29 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 293ms (Views: 255.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/login" for 50.24.135.66 at 2021-11-11 19:13:33 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 50.24.135.66 at 2021-11-11 19:13:38 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BB5HotO77hTADN5JtUSHaMNdbgvaRGRpF/i2wXpzhRKLJUg5lpbuMJl4vemtnubTP7pdQO4alvoPAJeXuN949g==", "session"=>{"email"=>"peterwu19881230@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "peterwu19881230@gmail.com"]]
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 313ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:13:39 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:13:39 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 50.24.135.66 at 2021-11-11 19:19:22 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.24.135.66 at 2021-11-11 19:19:27 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+5ILVLQ+jJJbbR4SFt7KIeOrz5+ThS69QBtRTbvVrsE1Ue2F/36FhAZ19hQgRqTe2mcdUoQ5int+EwT9EOrXw==", "session"=>{"email"=>"peterwu19881230@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "peterwu19881230@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 327ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 50.24.135.66 at 2021-11-11 19:24:09 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SE1a06DeYv36zEkiVUBxCxwShAhcKc9jSC9LV5ZoYDvHdlVI5fNi2aO4KoJNmhCw4PW3Q2h3PfBQ12oBVMSd3w==", "session"=>{"email"=>"peterwu19881230@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "peterwu19881230@gmail.com"]]
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 319ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:24:10 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:24:10 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:28:13 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered announcements/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:28:57 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:30:34 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:31:00 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:31:02 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:31:03 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:31:04 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:31:16 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:31:43 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:32:29 +0000
+Processing by AnnouncementsController#index as HTML
+  Rendered announcements/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ec2-user/environment/casa/calm/app/views/announcements/index.html.erb:10: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+...( current_user.email, :class => 'btn btn-primary pull-right'...
+...                             ^~):
+  app/views/announcements/index.html.erb:10: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:32:41 +0000
+Processing by AnnouncementsController#index as HTML
+  Rendered announcements/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ec2-user/environment/casa/calm/app/views/announcements/index.html.erb:10: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+...( current_user.email, :class => 'pull-right' );@output_buffe...
+...                             ^~):
+  app/views/announcements/index.html.erb:10: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.5ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:32:42 +0000
+Processing by AnnouncementsController#index as HTML
+  Rendered announcements/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ec2-user/environment/casa/calm/app/views/announcements/index.html.erb:10: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+...( current_user.email, :class => 'pull-right' );@output_buffe...
+...                             ^~):
+  app/views/announcements/index.html.erb:10: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.6ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:32:51 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:36:57 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:37:22 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 50.24.135.66 at 2021-11-11 19:37:23 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZYp0ukwRqialMI066+0QCkuyT0+ieFVhX6SlDA+lAS/qsXshCTyqAvxE7przN3Gxt1V8BJYmp/JHXIRazQn8yw=="}
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:37:23 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:37:23 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 50.24.135.66 at 2021-11-11 19:38:12 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.24.135.66 at 2021-11-11 19:38:16 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.24.135.66 at 2021-11-11 19:38:26 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I5W3BwicpuYoJpPZSI8vbdLn9sx0puGqdi2ZQD0RcDqsrricTbGmwnFS8HlQVU7WLgDFh0D4Ezlu1bgW/72N3g==", "session"=>{"email"=>"peterwu19881230@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "peterwu19881230@gmail.com"]]
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 311ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:38:26 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:38:26 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 50.24.135.66 at 2021-11-11 19:38:38 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Sf0Z1Cv8r0wOnMxhwxiq/NAvlHdNiunCzw8sLuqc7j3GxhZPbtGvaFfor8HbwstHLMinPHnUG1HX9w14KDAT2Q=="}
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:38:38 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:38:38 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 50.24.135.66 at 2021-11-11 19:38:47 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.24.135.66 at 2021-11-11 19:38:51 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CIRjtMFJ9uE6RGqky7gZXLyTKGHduuFfpXWsSt4zhzmHv2wvhGT2xWMwCQTTYnjnQHQbKunkE8y9jY0cHJ963Q==", "session"=>{"email"=>"peterwu19881230@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "peterwu19881230@gmail.com"]]
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 302ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:38:51 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:38:51 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:39:28 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for 50.24.135.66 at 2021-11-11 19:39:30 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aVR3lCJxtRxgWAptv0J0nWPPjsyM3N4LFtCkZi8Vov/mb3gPZ1y1ODksac2nmBUmnyi9h7iCLJgOKIUw7blfGw=="}
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:39:30 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:39:30 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 50.24.135.66 at 2021-11-11 19:39:43 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 23.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 50.24.135.66 at 2021-11-11 19:39:47 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GS06RKDXrsa/QFd0i1VeG9lPT/KYkp+eZTs/bw3UTcyWFjXf5fqu4uY0NNSTjz+gJah8uazMbQ19wx45z3iwKA==", "session"=>{"email"=>"peterwu19881230@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "peterwu19881230@gmail.com"]]
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 301ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:39:47 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:39:47 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 50.24.135.66 at 2021-11-11 19:39:50 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NP4zVxEei50e2ptWO9Y37PcUeRJ4PPakssVJseYxqAy7xTzMVDOLuUeu+PYjDFZXC/NKWUxiBDeqPWjnJJ1V6A=="}
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:39:50 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:39:50 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (1.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:41:28 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:41:46 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 50.24.135.66 at 2021-11-11 19:41:48 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.24.135.66 at 2021-11-11 19:41:52 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g98WkDsUgi0yRtv6PW5pnadqcI1YV/f2GgsZlOTOd18M5BkLfjmCCWsyuFoltAgmW41DxmwJBWUC8zjCJmKKuw==", "session"=>{"email"=>"peterwu19881230@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "peterwu19881230@gmail.com"]]
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 307ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:41:52 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:41:52 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:42:52 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 50.24.135.66 at 2021-11-11 19:42:56 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SbaqedontvZTabyMNKjSmKx9UVaz7uhnQVx3xSSoVWzGjaXinwq20god3ywscrMjUJpiHYewGvRZpFaT5gSoiA=="}
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:42:56 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:42:56 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:42:58 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 50.24.135.66 at 2021-11-11 19:43:04 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.24.135.66 at 2021-11-11 19:43:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6mD35KPMd7gPO9fvoQqjZ3GIqy6LyflNzkEhOGF+B9tlW/h/5uF3nFZPtE+50MLcjW+YZb+XC97WuQBuo9L6Pw==", "session"=>{"email"=>"peterwu19881230@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "peterwu19881230@gmail.com"]]
+Redirected to https://1eb27039ef024b5bac8368a8ec1d6278.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 312ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 50.24.135.66 at 2021-11-11 19:43:07 +0000
+
+
+Started GET "/announcements" for 50.24.135.66 at 2021-11-11 19:43:07 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
