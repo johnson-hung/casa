@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Research Interests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @research_interests.each do |research_interest| %>
+      <tr>
+        <td><%= research_interest.field %></td>
+        <td><%= link_to 'Show', research_interest %></td>
+        <td><%= link_to 'Edit', edit_research_interest_path(research_interest) %></td>
+        <td><%= link_to 'Destroy', research_interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Research interest', new_research_interest_path %>

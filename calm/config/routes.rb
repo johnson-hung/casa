@@ -1,4 +1,5 @@
 CALM::Application.routes.draw do
+  resources :research_interests
   get 'signup', to: 'signup#new'
   post 'signup', to: 'signup#create'
   
