@@ -13,7 +13,9 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the (CALM )?home\s?page$/ then '/movies'
+    when /^the (CALM )?home\s?page$/ then '/announcements'
+    # we will need this after events on the view
+    # when /^the (CALM )?home\s?page$/ then '/events'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
@@ -22,13 +24,24 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
     
     when /^the home\s?page$/
-      movies_path
+      # movies_path
+      announcements_path
+      
     when /^the edit page for "(.*)"$/
-      movie_id = Movie.find_by(title: $1).id
-      edit_movie_path(movie_id)
+      # movie_id = Movie.find_by(title: $1).id
+      # edit_movie_path(movie_id)
+      
+      announcement_id = Announcement.find_by(title: $1).id
+      edit_movie_path(announcement_id)
+      
+      # event_id = Event.find_by(title: $1).id
+      # edit_movie_path(announcement_id)
+      
     when /^the details page for "(.+)"$/
       movie = Movie.find_by(title: $1)
       movie_path(movie)
+      
+      
     when /^the Similar Movies page for "(.+)"/
       search_similar_movies_path($1)
 

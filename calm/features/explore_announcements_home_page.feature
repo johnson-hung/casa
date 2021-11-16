@@ -15,6 +15,10 @@ Background: announcements have been added to database
   And I am on the CALM home page
   Then 3 seed announcements should exist
 
+Scenario: see an announcements
+  Given I am on the home page 
+  Then I should see "Announcement_1"
+
 #Scenario: sort movies alphabetically
 #  When I follow "Movie Title"
 #  # your steps here
