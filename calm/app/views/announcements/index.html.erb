@@ -9,7 +9,7 @@
 
 <p align="right">
 <%= current_user.email %>
-<%= link_to "Log out", logout_path, method: "delete", :class => 'btn btn-primary pull-right' %>
+<%= link_to "Log out", logout_path, method: "post", :class => 'btn btn-primary pull-right' %>
 </p>
   
 <% else %>
