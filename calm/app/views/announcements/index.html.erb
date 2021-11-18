@@ -4,11 +4,27 @@
   <%= link_to 'Home', root_path %>
 </p>
 
+
+<% if current_user %>
+
+<p align="right">
+<%= current_user.email %>
+<%= link_to "Log out", logout_path, method: "post", :class => 'btn btn-primary pull-right' %>
+</p>
+  
+<% else %>
+
 <p align="right">
   <%= link_to 'Post an announcement', new_announcement_path, :class => 'btn btn-primary pull-right' %>
   <%= link_to 'Login', login_path, :class => 'btn btn-primary pull-right ' %>
   <%= link_to 'Signup', signup_url, :class => 'btn btn-primary pull-right' %>
 </p>
+
+
+<% end %>
+
+
+
 
 <h2>Announcement</h2>
 
@@ -51,5 +67,8 @@
 </table>
 
 
-<h2>Something else</h2>
+
+<% if current_user %>
+<h2>Can see this if logged in</h2>
   <%= text_field :announcement, :title, :class => 'form-control' %>
+<% end %>
