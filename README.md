@@ -18,7 +18,7 @@ Run the app locally (if using AWS Cloud9)
 ```sh
 rails s -p $PORT -b $IP
 ```
-
+ 
 To make changes to migration, we have to rollback previous migration:
 ```sh
 rake db:rollback
@@ -26,4 +26,15 @@ rake db:rollback
 Then, edit migration and apply migration for corrected version:
 ```sh
 rake db:migrate
+```
+
+## Deployment
+```sh
+heroku login
+heroku create
+git push heroku master
+
+# if need migration
+heroku run rake db:migrate
+heroku run rake db:seed
 ```
