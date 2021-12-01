@@ -27,6 +27,25 @@ class AnnouncementsController < ApplicationController
       redirect_to :sort => sort, :ratings => @selected_ratings and return
     end
     @announcements = Announcement.where(rating: @selected_ratings.keys).order(ordering)
+    
+    
+    
+    # Hmm... tbh, this event stuff shouldn't be here lol
+    e_sort = params[:e_sort] || session[:e_sort]
+    case e_sort
+    when 'name'
+      ordering, @e_name_header = {:name => :asc}, 'bg-light'
+    when 'location'
+      ordering, @e_location_header = {:location => :asc}, 'bg-light'
+    when 'start_at'
+      ordering, @e_start_date_header = {:start_at => :asc}, 'bg-light'
+    end
+    
+    if params[:e_sort] != session[:e_sort]
+      session[:e_sort] = e_sort
+      redirect_to :e_sort => e_sort and return
+    end
+    @events = Event.all.order(ordering);
   end 
     
   def new
