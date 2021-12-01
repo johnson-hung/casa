@@ -1,0 +1,18 @@
+<h2>Post an event</h2>
+
+<%= form_tag events_show_path, :class => 'form' do %>
+  <%= label :event, :title, 'Title', :class => 'col-form-label' %>
+  <%= text_field :event, :title, :class => 'form-control' %>
+  
+  <%= label :event, :author, 'Author', :class => 'col-form-label' %>
+  <%= text_field :event, 'author', :class => 'form-control' %>
+  
+  <%= label :event, :description, 'Content', :class => 'col-form-label' %>
+  <%= text_field :event, :description, :class => 'form-control' %>
+  
+  <%= label :event, :release_date, 'Released On', :class => 'col-form-label'  %>
+  <%= date_select :event, :release_date, {}, :class => 'form-control col-2 d-inline' %>
+  <br/>
+  <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', events_show_path, :class => 'btn btn-secondary' %>
+<% end %>
