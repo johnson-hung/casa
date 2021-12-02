@@ -1,4 +1,6 @@
 CALM::Application.routes.draw do
+  get '/home', to: 'announcements#index'
+  
   get 'signup', to: 'signup#new'
   post 'signup', to: 'signup#create'
   
@@ -8,6 +10,7 @@ CALM::Application.routes.draw do
   post 'logout', to: 'sessions#destroy'
   
   resources :announcements
-  # map '/' to be a redirect to '/announcements'
-  root :to => redirect('/announcements')
+
+  # map '/' to be a redirect to '/home'
+  root :to => redirect('/home')
 end
