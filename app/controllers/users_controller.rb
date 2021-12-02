@@ -4,8 +4,13 @@ class UsersController < ApplicationController
     end
     
 
-    
-    
+    def show 
+        current_user
+        if @current_user != nil
+            @select_research_interest = @current_user.research_interest_ids
+         end
+    end 
+             
     private
     
     def user_params

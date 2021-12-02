@@ -7,8 +7,6 @@
   <% end %>
 <% end %>
 
-#account_name, :password, :password_confirmation, :first_name, :last_name, :organization, :email, :phone, :mentor, :mentee
-
 <%= form_tag signup_path(@user), :class => 'form' do %>
   <%= label :user, :account_name, 'User Name', :class => 'col-form-label' %>
   <%= text_field :user, :account_name, :class => 'form-control' ,:value => current_user.account_name %>
@@ -30,9 +28,10 @@
  
   
   <%= label :user,  "Research Interests" %><br />
+
   <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
     <div class="collection-check-box">
-      <%= b.check_box %>
+      <%= if @select_research_interest.include?(b.value) then b.check_box(checked: true) else b.check_box end %>
       <%= b.label %>
     </div>
   <% end %>
