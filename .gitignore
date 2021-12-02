@@ -2,8 +2,8 @@
 .DS_Store # this one from Mac folders
 
 # Ignore all logfiles and tempfiles.
-calm/log/*
-calm/tmp/*
+/log/*
+/tmp/*
 !/log/.keep
 !/tmp/.keep
 
