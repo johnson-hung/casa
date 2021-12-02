@@ -7,7 +7,7 @@
   <% end %>
 <% end %>
 
-<%= form_tag signup_path(@user), :class => 'form' do %>
+<%= form_tag edit_user_path(current_user), :method => :patch  do %>
   <%= label :user, :account_name, 'User Name', :class => 'col-form-label' %>
   <%= text_field :user, :account_name, :class => 'form-control' ,:value => current_user.account_name %>
   
@@ -31,7 +31,7 @@
 
   <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
     <div class="collection-check-box">
-      <%= if @select_research_interest.include?(b.value) then b.check_box(checked: true) else b.check_box end %>
+      <%= if @select_research_interest then if @select_research_interest.include?(b.value) then b.check_box(checked: true) else b.check_box end  else b.check_box end %>
       <%= b.label %>
     </div>
   <% end %>
@@ -46,7 +46,13 @@
   <%= check_box_tag "mentee", "1"%>
   
   <br/>
-  <%= submit_tag 'Submit', :class => 'btn btn-primary' %>
+  <%= submit_tag "Update" , :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', announcements_path, :class => 'btn btn-secondary' %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Post announcement', announcements_path, :class => 'btn btn-secondary' end %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Edit announcement', announcements_path, :class => 'btn btn-secondary' end %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Post event', announcements_path, :class => 'btn btn-secondary' end %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Edit event', announcements_path, :class => 'btn btn-secondary' end %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Export csv', announcements_path, :class => 'btn btn-secondary' end %>
+  
 <% end %>
 

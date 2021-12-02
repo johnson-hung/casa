@@ -13,9 +13,12 @@ CALM::Application.routes.draw do
   put 'events/:id/edit', to: 'events#update'
   
   resources :research_interests
+ 
+
   
-  get 'user', to: 'users#show'
-  post 'user', to: 'users#show'
+  get '/user/:id', to: 'users#edit', as: 'edit_user'
+  patch '/user/:id', to: 'users#update'
+  
 
   get 'signup', to: 'signup#new'
   post 'signup', to: 'signup#create'
