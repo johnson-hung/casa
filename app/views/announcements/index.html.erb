@@ -118,7 +118,7 @@
           <!-- TBD (should check if user is organizer) -->
           <% if current_user %>
           <div class="text-center">
-            <%= link_to 'Edit', root_path, :class => 'btn btn-primary' %>
+            <%= link_to 'Edit', events_edit_path(event), :class => 'btn btn-primary' %>
           </div>
           <% end %>
         </td>
@@ -130,7 +130,7 @@
 <!-- TBD (should check if user is organizer) -->
 <% if current_user %>
 <div class="col-md-12 text-center">
-  <%= link_to 'Add Event', new_announcement_path, :class => 'btn btn-primary' %>
+  <%= link_to 'Add Event', events_new_path, :class => 'btn btn-primary' %>
 </div>
 <% end %>
 

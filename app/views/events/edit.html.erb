@@ -1,16 +1,13 @@
 <h2>Edit Existing Event</h2>
-<%= form_tag event_path(@event), :method => :put do %>
-  <%= label :event, :title, 'Title', :class => 'col-form-label' %>
-  <%= text_field :event, 'title', :class => 'form-control' %>
+<%= form_tag events_edit_path(@event), :method => :put do %>
+  <%= label :event, :name, 'Name', :class => 'col-form-label' %>
+  <%= text_field :event, 'name', :class => 'form-control' %>
   
-  <%= label :event, :author, 'Author', :class => 'col-form-label' %>
-  <%= text_field :event, 'author', :class => 'form-control' %>
+  <%= label :event, :location, 'Location', :class => 'col-form-label' %>
+  <%= text_field :event, 'location', :class => 'form-control' %>
 
-  <%= label :event, :description, 'Content', :class => 'col-form-label' %>
-  <%= text_field :event, :description, :class => 'form-control' %>
-  
-  <%= label :event, :release_date, 'Released On', :class => 'col-form-label'  %>
-  <%= date_select :event, :release_date, {}, :class => 'form-control col-2 d-inline' %>
+  <%= label :event, :start_at, 'Starting Date', :class => 'col-form-label'  %>
+  <%= date_select :event, :start_at, {}, :class => 'form-control col-2 d-inline' %>
   <br/>
   <%= submit_tag 'Update Event Info', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', events_path, :class => 'btn btn-secondary' %>
