@@ -32,17 +32,13 @@
   <%= text_field :user, :phone, :class => 'form-control' %>
  
   
-  <%= label :user, :research_interests, 'Reasarch Insterests', :class => 'col-form-label'  %>
-  <br/>
-  <%= label :user, :research_interests, 'high performance computing'%>
-  <%= check_box_tag "high performance computing", "1"%>
-  
-  <%= label :user, :research_interests, 'machine learning'%>
-  <%= check_box_tag "machine learning", "1"%>
-  
-  <%= label :user, :research_interests, 'operating system'%>
-  <%= check_box_tag "operating system", "1"%>
-
+<%= label :user,  "Research Interests" %><br />
+  <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
+    <div class="collection-check-box">
+      <%= b.check_box %>
+      <%= b.label %>
+    </div>
+  <% end %>
  <br/>
   
   <%= label :user, :mentor, 'Mentor', :class => 'col-form-label'%>

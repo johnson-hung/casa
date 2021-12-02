@@ -12,6 +12,10 @@ CALM::Application.routes.draw do
   post 'events/new', to: 'events#create'
   put 'events/:id/edit', to: 'events#update'
   
+  resources :research_interests
+  get 'my_account', to: 'my_account#new'
+  post 'my_account', to: 'my_account#create'
+
   get 'signup', to: 'signup#new'
   post 'signup', to: 'signup#create'
   
@@ -21,6 +25,7 @@ CALM::Application.routes.draw do
   post 'logout', to: 'sessions#destroy'
   
   resources :events
+  
   resources :announcements
   # map '/' to be a redirect to '/announcements'
   root :to => redirect('/announcements')

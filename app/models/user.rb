@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
     has_many :user_events
     has_many :events, through: :user_events
-    
-    # adds virtual attributes for authentication
+    has_and_belongs_to_many :research_interests
+    # adds virtual attributes for authenticatiosn
     has_secure_password
     
     # validation

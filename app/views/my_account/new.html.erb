@@ -1,0 +1,53 @@
+<h1>My Account</h1>
+
+
+<% if flash[:alert] %>
+  <% flash[:alert].each do |message| %>
+    <%= message%> <br>
+  <% end %>
+<% end %>
+
+#account_name, :password, :password_confirmation, :first_name, :last_name, :organization, :email, :phone, :mentor, :mentee
+
+<%= form_tag signup_path(@user), :class => 'form' do %>
+  <%= label :user, :account_name, 'User Name', :class => 'col-form-label' %>
+  <%= text_field :user, :account_name, :class => 'form-control' ,:value => current_user.account_name %>
+  
+  <%= label :user, :first_name, 'First Name', :class => 'col-form-label' %>
+  <%= text_field :user, :first_name, :class => 'form-control' ,:value => current_user.first_name %>
+  
+  <%= label :user, :last_name, 'Last Name', :class => 'col-form-label' %>
+  <%= text_field :user, :last_name, :class => 'form-control' ,:value => current_user.last_name %>
+  
+  <%= label :user, :organization, 'University/ Company', :class => 'col-form-label' %>
+  <%= text_field :user, :organization, :class => 'form-control' ,:value => current_user.organization %>
+  
+  <%= label :user, :email, 'Email', :class => 'col-form-label' %>
+  <%= text_field :user, :email, :class => 'form-control',:value => current_user.email %>
+  
+  <%= label :user, :phone, 'Phone', :class => 'col-form-label' %>
+  <%= text_field :user, :phone, :class => 'form-control' ,:value => current_user.phone %>
+ 
+  
+  <%= label :user,  "Research Interests" %><br />
+  <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
+    <div class="collection-check-box">
+      <%= b.check_box %>
+      <%= b.label %>
+    </div>
+  <% end %>
+ <br/>
+
+ <br/>
+  
+  <%= label :user, :mentor, 'Mentor', :class => 'col-form-label'%>
+  <%= check_box_tag "mentor", "1"%>
+  
+  <%= label :user, :mentee, 'Mentee'%>
+  <%= check_box_tag "mentee", "1"%>
+  
+  <br/>
+  <%= submit_tag 'Submit', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', announcements_path, :class => 'btn btn-secondary' %>
+<% end %>
+

@@ -1,0 +1,1789 @@
+
+
+Started GET "/" for 165.91.13.255 at 2021-12-01 21:57:22 +0000
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 21:57:22 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_flash.erb (0.9ms)
+Completed 200 OK in 709ms (Views: 672.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/my_account.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/signup.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/my_account.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/sessions.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/shoes.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/signup.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/shoes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.255 at 2021-12-01 21:57:23 +0000
+
+
+Started GET "/login" for 165.91.13.255 at 2021-12-01 21:57:25 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (24.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 73.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 165.91.13.255 at 2021-12-01 21:57:29 +0000
+Processing by SignupController#new as HTML
+  Rendered signup/new.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_flash.erb (3.3ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signup" for 165.91.13.255 at 2021-12-01 21:57:59 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6x2gwObeP8+PR9cxL6ynKDwA1wC9+y58r7oz+dxVUgFZTLDdu78FocQXyMattptc2Bad81TDR1DB7VVrOJn0DA==", "user"=>{"account_name"=>"philip", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"philip", "last_name"=>"shih", "organization"=>"tamu", "email"=>"philip0227@tamu.edu", "phone"=>"12345566789"}, "operating system"=>"1", "mentor"=>"1", "commit"=>"Submit"}
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'philip' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'philip0227@tamu.edu' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'philip' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'philip0227@tamu.edu' LIMIT 1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_name", "philip"], ["password_digest", "$2a$12$f06gQFE22x3Sh9i1wlLGRexjTKWtKyrMCakuNAU0raiGoEJA3bVTm"], ["first_name", "philip"], ["last_name", "shih"], ["organization", "tamu"], ["email", "philip0227@tamu.edu"], ["phone", "12345566789"], ["created_at", "2021-12-01 21:58:00.217033"], ["updated_at", "2021-12-01 21:58:00.217033"]]
+  [1m[35m (5.7ms)[0m  commit transaction
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 334ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 165.91.13.255 at 2021-12-01 21:58:00 +0000
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 21:58:00 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 165.91.13.255 at 2021-12-01 21:58:02 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.255 at 2021-12-01 21:58:12 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AMUkZG5MXVGgRmjBBaxuWkXbPaWktBchzob0t4hv76qylDR5My1nP+sWdzaHtlIuoc13Vk2Mfg2g0ZIlbKNJpw==", "session"=>{"email"=>"philip0227@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "philip0227@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 307ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.255 at 2021-12-01 21:58:13 +0000
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 21:58:13 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (46.3ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined local variable or method `my_account_path' for #<#<Class:0x00007f6f5c7cb168>:0x00007f6f5d857388>
+Did you mean?  my_account_create_path):
+    10: <p align="right">
+    11: <%= current_user.email %>
+    12: <%= link_to "Log out", logout_path, method: "post", :class => 'btn btn-primary pull-right' %>
+    13: <%= link_to "My account", my_account_path, method: "get", :class => 'btn btn-primary pull-right' %>
+    14: </p>
+    15:   
+    16: <% else %>
+  app/views/announcements/index.html.erb:13:in `_app_views_announcements_index_html_erb___3359643954392602310_70058134937640'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.0ms)
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 21:59:08 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (26.1ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `my_account' for #<#<Class:0x00007f6f5c7cb168>:0x00007f6f5d513050>):
+    10: <p align="right">
+    11: <%= current_user.email %>
+    12: <%= link_to "Log out", logout_path, method: "post", :class => 'btn btn-primary pull-right' %>
+    13: <%= link_to "My account", my_account, method: "get", :class => 'btn btn-primary pull-right' %>
+    14: </p>
+    15:   
+    16: <% else %>
+  app/views/announcements/index.html.erb:13:in `_app_views_announcements_index_html_erb___3359643954392602310_70058141845180'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 21:59:20 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `my_account_url' for #<#<Class:0x00007f6f5c7cb168>:0x00007f6f5908da70>
+Did you mean?  my_account_create_url):
+    10: <p align="right">
+    11: <%= current_user.email %>
+    12: <%= link_to "Log out", logout_path, method: "post", :class => 'btn btn-primary pull-right' %>
+    13: <%= link_to "My account", my_account_url, method: "get", :class => 'btn btn-primary pull-right' %>
+    14: </p>
+    15:   
+    16: <% else %>
+  app/views/announcements/index.html.erb:13:in `_app_views_announcements_index_html_erb___3359643954392602310_70058105922680'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.4ms)
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 22:00:53 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (36.0ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined local variable or method `my_account' for #<#<Class:0x00007f6f5d9f1658>:0x00007f6f5d9f6540>
+Did you mean?  my_account_url):
+    10: <p align="right">
+    11: <%= current_user.email %>
+    12: <%= link_to "Log out", logout_path, method: "post", :class => 'btn btn-primary pull-right' %>
+    13: <%= link_to "My account", my_account, method: "get", :class => 'btn btn-primary pull-right' %>
+    14: </p>
+    15:   
+    16: <% else %>
+  app/views/announcements/index.html.erb:13:in `_app_views_announcements_index_html_erb___3359643954392602310_70058144410060'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.5ms)
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 22:01:18 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:01:20 +0000
+
+SyntaxError (/home/ec2-user/environment/casa/app/controllers/my_account_controller.rb:11: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/my_account_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.0ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:01:40 +0000
+Processing by MyAccountController#create as HTML
+  Parameters: {"authenticity_token"=>"bx3EixNDLVucNnAoqnxIKz/j/VxxSwrI+KF4oaaDclTdTNSWTiIXNddmb98oZnRf2/W3r5hzY+SW9h4zQk/UWQ=="}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/my_account_controller.rb:6:in `create'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.5ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:04:50 +0000
+
+SyntaxError (/home/ec2-user/environment/casa/config/routes.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+  post 'my_account', to 'my_account#create'
+                        ^):
+  config/routes.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:05:10 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"bx3EixNDLVucNnAoqnxIKz/j/VxxSwrI+KF4oaaDclTdTNSWTiIXNddmb98oZnRf2/W3r5hzY+SW9h4zQk/UWQ=="}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+ActionView::MissingTemplate (Missing template my_account/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby]}. Searched in:
+  * "/home/ec2-user/environment/casa/app/views"
+):
+  actionview (4.2.10) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.10) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.10) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.10) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/ec2-user/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.10) lib/rack/etag.rb:24:in `call'
+  rack (1.6.10) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.10) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.10) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.10) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (14.2ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:06:19 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"bx3EixNDLVucNnAoqnxIKz/j/VxxSwrI+KF4oaaDclTdTNSWTiIXNddmb98oZnRf2/W3r5hzY+SW9h4zQk/UWQ=="}
+  Rendered my_account/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 37.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/logout" for 165.91.13.255 at 2021-12-01 22:10:47 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bx3EixNDLVucNnAoqnxIKz/j/VxxSwrI+KF4oaaDclTdTNSWTiIXNddmb98oZnRf2/W3r5hzY+SW9h4zQk/UWQ=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.255 at 2021-12-01 22:10:47 +0000
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 22:10:47 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 165.91.13.255 at 2021-12-01 22:10:49 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.255 at 2021-12-01 22:11:03 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nzk/80dAHZLDwhsOxFE4AHzS2B09xJ/AVGN8wc2FEoYtaC/uGiEn/IiSBPlGSwR0mMSS7tT89uw6NBpTKUm0iw==", "session"=>{"email"=>"philip0227@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "philip0227@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 308ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.255 at 2021-12-01 22:11:04 +0000
+
+
+Started GET "/announcements" for 165.91.13.255 at 2021-12-01 22:11:04 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:11:05 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  Rendered my_account/new.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:11:47 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered my_account/new.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:16:16 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  Rendered my_account/new.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007f6f5d772bc0>:0x00007f6f58f3bc58>
+Did you mean?  for
+               fork):
+    10: <%= form_tag signup_path(@user), :class => 'form' do %>
+    11:   <%= label :user, :account_name, 'User Name', :class => 'col-form-label' %>
+    12:   <%= text_field :user, :account_name, :class => 'form-control' %>
+    13:   <%= form.input :user, :account_name => { :value => 'current_user.email ' } %>
+    14:   
+    15:   <%= label :user, :password, 'Password', :class => 'col-form-label' %>
+    16:   <%= text_field :user, :password, :class => 'form-control' %>
+  app/views/my_account/new.html.erb:13:in `block in _app_views_my_account_new_html_erb__4387754942681529255_70058105230380'
+  app/views/my_account/new.html.erb:10:in `_app_views_my_account_new_html_erb__4387754942681529255_70058105230380'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:16:33 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  Rendered my_account/new.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `input' for #<#<Class:0x00007f6f5d772bc0>:0x00007f6f5d966760>):
+    10: <%= form_tag signup_path(@user), :class => 'form' do %>
+    11:   <%= label :user, :account_name, 'User Name', :class => 'col-form-label' %>
+    12:   <%= text_field :user, :account_name, :class => 'form-control' %>
+    13:   <%= input :user, :account_name => { :value => 'current_user.email ' } %>
+    14:   
+    15:   <%= label :user, :password, 'Password', :class => 'col-form-label' %>
+    16:   <%= text_field :user, :password, :class => 'form-control' %>
+  app/views/my_account/new.html.erb:13:in `block in _app_views_my_account_new_html_erb__4387754942681529255_70058144115260'
+  app/views/my_account/new.html.erb:10:in `_app_views_my_account_new_html_erb__4387754942681529255_70058144115260'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.3ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:17:10 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  Rendered my_account/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:17:23 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered my_account/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:18:35 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  Rendered my_account/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/my_account/new.html.erb:18: syntax error, unexpected ')'
+...rol' ,:value => current_user. );@output_buffer.safe_append='
+...                              ^
+/home/ec2-user/environment/casa/app/views/my_account/new.html.erb:61: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+/home/ec2-user/environment/casa/app/views/my_account/new.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/casa/app/views/my_account/new.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  app/views/my_account/new.html.erb:18: syntax error, unexpected ')'
+  app/views/my_account/new.html.erb:61: syntax error, unexpected end, expecting ')'
+  app/views/my_account/new.html.erb:64: syntax error, unexpected ensure, expecting ')'
+  app/views/my_account/new.html.erb:66: syntax error, unexpected end, expecting ')'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.2ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:19:01 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered my_account/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:20:06 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered my_account/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/my_account" for 165.91.13.255 at 2021-12-01 22:20:20 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered my_account/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.0ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMyAccounts (20211201222641)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "my_accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211201222641"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMyAccounts (20211201222641)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  DROP TABLE "my_accounts"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20211201222641"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMyAccounts (20211201222641)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "my_accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211201222641"]]
+  [1m[36m (12.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 00:09:44 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered my_account/new.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 139.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/research_interests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.201 at 2021-12-02 00:09:44 +0000
+
+
+Started GET "/assets/scaffolds.self-1a9f067b5e48b7a17eee3682bb656ab42a8a3550da9137de7c6667b883f72d8b.css?body=1" for 165.91.13.201 at 2021-12-02 00:09:44 +0000
+
+
+Started GET "/assets/research_interests.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.201 at 2021-12-02 00:09:44 +0000
+
+
+Started POST "/logout" for 165.91.13.201 at 2021-12-02 00:09:51 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KBIXwpYa2qrOOa3wNQDwsbdkof6V7ltFmLSIYK8hlXqaQwffy3vgxIVpsge3GszFU3LrDXzWMmn24+7yS+0zdw=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:09:51 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:09:51 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:09:54 +0000
+Processing by SignupController#new as HTML
+  [1m[35mResearchInterest Load (20.9ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (63.3ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 20.9ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: research_interests: SELECT "research_interests".* FROM "research_interests"):
+    33:  
+    34:   
+    35: <%= label :user,  "Research Interests" %><br />
+    36:   <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
+    37:     <div class="collection-check-box">
+    38:       <%= b.check_box %>
+    39:       <%= b.label %>
+  app/views/signup/new.html.erb:36:in `block in _app_views_signup_new_html_erb___675095452860267799_70058143557080'
+  app/views/signup/new.html.erb:9:in `_app_views_signup_new_html_erb___675095452860267799_70058143557080'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:10:45 +0000
+Processing by SignupController#new as HTML
+  [1m[36mResearchInterest Load (0.2ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: research_interests: SELECT "research_interests".* FROM "research_interests"):
+    33:  
+    34:   
+    35: <%= label :user,  "Research Interests" %><br />
+    36:   <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
+    37:     <div class="collection-check-box">
+    38:       <%= b.check_box %>
+    39:       <%= b.label %>
+  app/views/signup/new.html.erb:36:in `block in _app_views_signup_new_html_erb___675095452860267799_70058143557080'
+  app/views/signup/new.html.erb:9:in `_app_views_signup_new_html_erb___675095452860267799_70058143557080'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.2ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:11:31 +0000
+Processing by SignupController#new as HTML
+  [1m[35mResearchInterest Load (0.2ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: research_interests: SELECT "research_interests".* FROM "research_interests"):
+    33:  
+    34:   
+    35: <%= label :user,  "Research Interests" %><br />
+    36:   <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
+    37:     <div class="collection-check-box">
+    38:       <%= b.check_box %>
+    39:       <%= b.label %>
+  app/views/signup/new.html.erb:36:in `block in _app_views_signup_new_html_erb___675095452860267799_70058143557080'
+  app/views/signup/new.html.erb:9:in `_app_views_signup_new_html_erb___675095452860267799_70058143557080'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:11:32 +0000
+Processing by SignupController#new as HTML
+  [1m[36mResearchInterest Load (0.2ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: research_interests: SELECT "research_interests".* FROM "research_interests"):
+    33:  
+    34:   
+    35: <%= label :user,  "Research Interests" %><br />
+    36:   <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
+    37:     <div class="collection-check-box">
+    38:       <%= b.check_box %>
+    39:       <%= b.label %>
+  app/views/signup/new.html.erb:36:in `block in _app_views_signup_new_html_erb___675095452860267799_70058143557080'
+  app/views/signup/new.html.erb:9:in `_app_views_signup_new_html_erb___675095452860267799_70058143557080'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateResearchInterests (20211202000603)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "research_interests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "field" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211202000603"]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:12:50 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:12:50 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 305ms (Views: 277.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:12:54 +0000
+Processing by SignupController#new as HTML
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 72ms (Views: 36.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:13:08 +0000
+Processing by SignupController#new as HTML
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:13:08 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:13:08 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/research_interests/new" for 165.91.13.201 at 2021-12-02 00:13:09 +0000
+Processing by ResearchInterestsController#new as HTML
+  Rendered research_interests/_form.html.erb (1.9ms)
+  Rendered research_interests/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:13:12 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iD485fVpFhgm5SPMOxkFtqR7Cdn2+t16z0Nt3Iu/KAY6byz4qAgsdm21PDu5AznCQG1DKh/CtFahFAtOb3OOCw==", "user"=>{"account_name"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "organization"=>"", "email"=>"", "phone"=>"", "research_interest_ids"=>[""]}, "commit"=>"Submit"}
+Unpermitted parameter: research_interest_ids
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:13:15 +0000
+Processing by SignupController#new as HTML
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:13:16 +0000
+Processing by SignupController#new as HTML
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/research_interests/new" for 165.91.13.201 at 2021-12-02 00:13:16 +0000
+Processing by ResearchInterestsController#new as HTML
+  Rendered research_interests/_form.html.erb (1.1ms)
+  Rendered research_interests/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/research_interests" for 165.91.13.201 at 2021-12-02 00:13:26 +0000
+Processing by ResearchInterestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yk+yUOBrE9TEw9DsmMdXimhodrVUXyUJ04/Fs9935CB4HqJNvQopuo+Tzxsa3Wv+jH48Rr1nTCW92KMhO7tCLQ==", "research_interest"=>{"field"=>"operating system"}, "commit"=>"Create Research interest"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "research_interests" ("field", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["field", "operating system"], ["created_at", "2021-12-02 00:13:26.840509"], ["updated_at", "2021-12-02 00:13:26.840509"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/research_interests/1
+Completed 302 Found in 9ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/research_interests/1" for 165.91.13.201 at 2021-12-02 00:13:26 +0000
+Processing by ResearchInterestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResearchInterest Load (0.2ms)[0m  [1mSELECT  "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered research_interests/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/research_interests" for 165.91.13.201 at 2021-12-02 00:13:28 +0000
+Processing by ResearchInterestsController#index as HTML
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered research_interests/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/research_interests/new" for 165.91.13.201 at 2021-12-02 00:13:29 +0000
+Processing by ResearchInterestsController#new as HTML
+  Rendered research_interests/_form.html.erb (1.0ms)
+  Rendered research_interests/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/research_interests" for 165.91.13.201 at 2021-12-02 00:13:45 +0000
+Processing by ResearchInterestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gic7XudeSN8hwG0XHuE0X6lw/Cz4+4KODLoC5469C2+oditDuj9ysWqQcuCc+wgrTWa23xHD66Ji7WR1anGtYg==", "research_interest"=>{"field"=>"machine learning"}, "commit"=>"Create Research interest"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "research_interests" ("field", "created_at", "updated_at") VALUES (?, ?, ?)  [["field", "machine learning"], ["created_at", "2021-12-02 00:13:45.325849"], ["updated_at", "2021-12-02 00:13:45.325849"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/research_interests/2
+Completed 302 Found in 8ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/research_interests/2" for 165.91.13.201 at 2021-12-02 00:13:45 +0000
+Processing by ResearchInterestsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT  "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered research_interests/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/research_interests" for 165.91.13.201 at 2021-12-02 00:13:47 +0000
+Processing by ResearchInterestsController#index as HTML
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered research_interests/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/research_interests/new" for 165.91.13.201 at 2021-12-02 00:13:57 +0000
+Processing by ResearchInterestsController#new as HTML
+  Rendered research_interests/_form.html.erb (1.1ms)
+  Rendered research_interests/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:13:59 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:13:59 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:13:59 +0000
+Processing by SignupController#new as HTML
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Could not find table 'research_interests_users'):
+    35: <%= label :user,  "Research Interests" %><br />
+    36:   <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
+    37:     <div class="collection-check-box">
+    38:       <%= b.check_box %>
+    39:       <%= b.label %>
+    40:     </div>
+    41:   <% end %>
+  app/views/signup/new.html.erb:38:in `block (2 levels) in _app_views_signup_new_html_erb___3805781343131992122_33984440'
+  app/views/signup/new.html.erb:36:in `block in _app_views_signup_new_html_erb___3805781343131992122_33984440'
+  app/views/signup/new.html.erb:9:in `_app_views_signup_new_html_erb___3805781343131992122_33984440'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTableUsersResearchInterests (20211202001620)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "research_interests_users" ("user_id" integer NOT NULL, "research_interest_id" integer NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211202001620"]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:16:42 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:16:43 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 199ms (Views: 174.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/signup" for 165.91.13.201 at 2021-12-02 00:16:46 +0000
+Processing by SignupController#new as HTML
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (31.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 84ms (Views: 68.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:17:16 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eqBWuh9x/oHOBzLEl4dpILdGffjkrTGsE9ErovzpC8bI8UanQhDE74VXLTMVnVVUU1A3Cw2VWIB9hk0wGCWtyw==", "user"=>{"account_name"=>"aaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@a", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "mentor"=>"1", "commit"=>"Submit"}
+Unpermitted parameter: research_interest_ids
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaa' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaa' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@a' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["account_name", "aaa"], ["password_digest", "$2a$12$cTsGwpuhdS1X4OunfeMrh.X2nRgXDytWLViKQHRqDSJYtJVzS9aQC"], ["first_name", "aa"], ["last_name", "aa"], ["organization", "a"], ["email", "a@a"], ["phone", "123"], ["created_at", "2021-12-02 00:17:16.764592"], ["updated_at", "2021-12-02 00:17:16.764592"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 328ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:17:16 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:17:16 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateJoinTableUsersResearchInterests (20211202001620)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "research_interests_users"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20211202001620"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTableUsersResearchInterests (20211202001620)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "research_interests_users" ("user_id" integer NOT NULL, "research_interest_id" integer NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211202001620"]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+
+
+Started GET "/login" for 165.91.13.201 at 2021-12-02 00:27:06 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 165.91.13.201 at 2021-12-02 00:27:20 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TpuYVaLL11oAiHED3gXCOdFxMH4hJLp2rafru+pC16/8yohI/6rtNEvYbvRcH/5NNWd6jcgc01rD8I0pDo5xog==", "session"=>{"email"=>"philip0227@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "philip0227@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 305ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:27:20 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:27:20 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 00:27:22 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"pCO6sP3v8+V7Oa+TeJrRFIl6AbRArLnvTilQP+Nb9uMWcqqtoI7JizBpsGT6gO1gbWxLR6mU0MMgfjatB5dQ7g=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered my_account/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/logout" for 165.91.13.201 at 2021-12-02 00:28:36 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pCO6sP3v8+V7Oa+TeJrRFIl6AbRArLnvTilQP+Nb9uMWcqqtoI7JizBpsGT6gO1gbWxLR6mU0MMgfjatB5dQ7g=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:28:36 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:28:36 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 165.91.13.201 at 2021-12-02 00:28:37 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.201 at 2021-12-02 00:28:44 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQFyx4JPNQlYGCKmie/fkq72Wqxfvfr956GzXApTI6QTUGLa3y4PZxNIPVEL9ePmSuAQX7aFk9GJ9tXO7p+FqQ==", "session"=>{"email"=>"a@a", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "a@a"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 306ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:28:44 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:28:44 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 00:28:46 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"MPP2ENDgZo/0EQQhs1r/B0Pua/iQTEQ+BK9lcdCucoeCouYNjYFc4b9BG9YxQMNzp/ghC3l0LRJq+APjNGLUig=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered my_account/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateJoinTableUsersResearchInterests (20211202001620)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "research_interests_users"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20211202001620"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTableUsersResearchInterests (20211202001620)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "research_interests_users" ("user_id" integer NOT NULL, "research_interest_id" integer NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTableUsersResearchInterests (20211202001620)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "research_interests_users" ("user_id" integer NOT NULL, "research_interest_id" integer NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_research_interests_users_on_u_id_and_ri_id" ON "research_interests_users" ("u_id", "ri_id")[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTableUsersResearchInterests (20211202001620)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "research_interests_users" ("user_id" integer NOT NULL, "research_interest_id" integer NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTableUsersResearchInterests (20211202001620)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "research_interests_users" ("user_id" integer NOT NULL, "research_interest_id" integer NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "ur_id" ON "research_interests_users" ("user_id", "research_interest_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='ur_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ur_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "ru_id" ON "research_interests_users" ("research_interest_id", "user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211202001620"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='ru_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ru_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='ur_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ur_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:44:26 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/logout" for 165.91.13.201 at 2021-12-02 00:44:28 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AJCeyJKY32720A+/UOexlgH5pv128VUW/o2hcU0St9SywY7Vz/nlAL2AEEjS/Y3i5e/sDp/JPDqQ2sfjqd4R2Q=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:44:28 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:44:28 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 165.91.13.201 at 2021-12-02 00:44:31 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.201 at 2021-12-02 00:44:36 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CtM52pwqbjO8PvFXb0DukZKW0RHRwOJ+QszQIhIyHN24ginHwUtUXfdu7qDtWtLldoCb4jj4i1Ism7aw9v660A==", "session"=>{"email"=>"a@a", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "a@a"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 304ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:44:37 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:44:37 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 00:44:39 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"Fh+xXfb8kOx87UxD/PrfRPdByPZ11GX8i0MtkPKatyOkTqFAq52qgje9U7R+4OMwE1eCBZzsDNDlFEsCFlYRLg=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered my_account/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:44:44 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IMKZVMyLsGmsNb7WLoZyfJxFqKUjMcEimA2Rx/7o3oqSk4lJkeqKB+dloSGsnE4IeFPiVsoJqA72WvdVGiR4hw==", "user"=>{"account_name"=>"aaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@a", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "commit"=>"Submit"}
+Unpermitted parameter: research_interest_ids
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaa' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@a' LIMIT 1[0m
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:44:57 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e28FPTBMSmux2Gbo1sqwuqhaGrwyIX1Ae0PxU5HXrgLJPhUgbS1wBfqIeR9U0IzOTExQT9sZFGwVFJfBdRsIDw==", "user"=>{"account_name"=>"aaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "commit"=>"Submit"}
+Unpermitted parameter: research_interest_ids
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaa' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aa' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaa' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aa' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["account_name", "aaaa"], ["password_digest", "$2a$12$3wYkmPSqfUgdhhjUg2IKH.SvzcBpaP1n6ToRtlXY6HNeMzstUzMjK"], ["first_name", "aa"], ["last_name", "aa"], ["organization", "a"], ["email", "a@aa"], ["phone", "123"], ["created_at", "2021-12-02 00:44:57.605838"], ["updated_at", "2021-12-02 00:44:57.605838"]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 317ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:44:57 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:44:57 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/logout" for 165.91.13.201 at 2021-12-02 00:45:00 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cFq6PJR7/q1XTRaFo+rnskb0Bo0tIMhGwzDEh9x7kQHCC6ohyRrEwxwdCXIh8NvGouJMfsQYoWqtZ6IVOLc3DA=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:45:00 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:45:00 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 165.91.13.201 at 2021-12-02 00:45:01 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.201 at 2021-12-02 00:45:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k/PP4ih0w1x+7OY0lXI7FeqCY38MKI2gKiUzek4VC9Yhot//dRX5MjW8+cMXaAdhDpQpjOUQ5IxEclXoqtmt2w==", "session"=>{"email"=>"a@aa", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "a@aa"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 302ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:45:07 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:45:08 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered announcements/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 00:45:10 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"RVbkamHObBaP4ELrnXRIzEAUeJNu3+bufBeb93Kxvrn3B/R3PK9WeMSwXRwfbnS4pAIyYIfnj8ISQP1lln0YtA=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered my_account/new.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 00:51:46 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"RVbkamHObBaP4ELrnXRIzEAUeJNu3+bufBeb93Kxvrn3B/R3PK9WeMSwXRwfbnS4pAIyYIfnj8ISQP1lln0YtA=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered my_account/new.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 26.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:51:51 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ffpM5dcJg/1kvAkZdhB7RPASTWwDR50bPjsEUP3TMrTPq1z4imi5ky/sFu70CkcwFAQHn+p/9DdQbGLCGR+UuQ==", "user"=>{"account_name"=>"aaaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aaa", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "commit"=>"Submit"}
+Unpermitted parameter: research_interest_ids
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `research_interests_ids=' for #<User:0x00007ff835a73e58>
+Did you mean?  research_interest_ids=
+               research_interests=
+               research_interest_ids
+               research_interests):
+  app/controllers/signup_controller.rb:8:in `create'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.0ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:52:18 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ffpM5dcJg/1kvAkZdhB7RPASTWwDR50bPjsEUP3TMrTPq1z4imi5ky/sFu70CkcwFAQHn+p/9DdQbGLCGR+UuQ==", "user"=>{"account_name"=>"aaaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aaa", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "commit"=>"Submit"}
+Unpermitted parameter: research_interest_ids
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `research_interests_ids=' for #<User:0x00007ff836632348>
+Did you mean?  research_interest_ids=
+               research_interests=
+               research_interest_ids
+               research_interests):
+  app/controllers/signup_controller.rb:8:in `create'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.3ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:52:35 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ffpM5dcJg/1kvAkZdhB7RPASTWwDR50bPjsEUP3TMrTPq1z4imi5ky/sFu70CkcwFAQHn+p/9DdQbGLCGR+UuQ==", "user"=>{"account_name"=>"aaaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aaa", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "commit"=>"Submit"}
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" IN (1, 2)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.9ms)
+
+NoMethodError (undefined method `research_interests_ids=' for #<User:0x00007ff8345f5710>
+Did you mean?  research_interest_ids=
+               research_interests=
+               research_interest_ids
+               research_interests):
+  app/controllers/signup_controller.rb:8:in `create'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.0ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:55:32 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ffpM5dcJg/1kvAkZdhB7RPASTWwDR50bPjsEUP3TMrTPq1z4imi5ky/sFu70CkcwFAQHn+p/9DdQbGLCGR+UuQ==", "user"=>{"account_name"=>"aaaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aaa", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" IN (1, 2)[0m
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" WHERE 1=0
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaa' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aaa' LIMIT 1
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 17.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 00:55:40 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aPtikXeYZPnEM8vle4dsed/hbjn2v0fHVktfICCKDF3aqnKMKvlel49j1BL5nVANO/ckyh+HLus4HDmyxEaqUA==", "user"=>{"account_name"=>"aaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aaa", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "commit"=>"Submit"}
+  [1m[35mResearchInterest Load (0.2ms)[0m  SELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" IN (1, 2)
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE 1=0[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaa' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aaa' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaa' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aaa' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_name", "aaaaa"], ["password_digest", "$2a$12$aVB3VzTkgIi0gp7ex9GW..DPjbrxcA0zRHySJkRmufxZWv2S7fGuS"], ["first_name", "aa"], ["last_name", "aa"], ["organization", "a"], ["email", "a@aaa"], ["phone", "123"], ["created_at", "2021-12-02 00:55:40.704261"], ["updated_at", "2021-12-02 00:55:40.704261"]]
+  [1m[35m (5.5ms)[0m  commit transaction
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 319ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 00:55:40 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 00:55:40 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 01:19:54 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 01:19:55 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"eKCTxOp2fnhxDnbULdLfW+FriYsUJsf2kA7sEyfpIOnK8YPZtxdEFjpeaSOvyOMvBX3DeP0ertr+WYqBwyWG5A=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered my_account/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:19:58 +0000
+
+SyntaxError (/home/ec2-user/environment/casa/app/controllers/signup_controller.rb:11: syntax error, unexpected ':', expecting ')'
+...earchInterestUser.new(user_id : id , research_interest_ids :...
+...                              ^
+/home/ec2-user/environment/casa/app/controllers/signup_controller.rb:11: syntax error, unexpected ':', expecting '='
+... : id , research_interest_ids : params[:research_interest_id...
+...                              ^
+/home/ec2-user/environment/casa/app/controllers/signup_controller.rb:11: syntax error, unexpected ')', expecting end
+...params[:research_interest_ids])
+...                              ^):
+  app/controllers/signup_controller.rb:11: syntax error, unexpected ':', expecting ')'
+  app/controllers/signup_controller.rb:11: syntax error, unexpected ':', expecting '='
+  app/controllers/signup_controller.rb:11: syntax error, unexpected ')', expecting end
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.6ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:20:32 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9KMK9ukndWASbXAGGxqlcNLIFDbmM5l7lRH3Hv7mBzxG8hrrtEZPDlk9b/GZAJkENt5exQ8L8Ff7RpGMGiqhMQ==", "user"=>{"account_name"=>"aaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = 1[0m
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" WHERE 1=0
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.1ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'research_interest_users'):
+  app/controllers/signup_controller.rb:9:in `create'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.4ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:21:04 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9KMK9ukndWASbXAGGxqlcNLIFDbmM5l7lRH3Hv7mBzxG8hrrtEZPDlk9b/GZAJkENt5exQ8L8Ff7RpGMGiqhMQ==", "user"=>{"account_name"=>"aaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = 1[0m
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" WHERE 1=0
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `map' for nil:NilClass):
+  app/controllers/signup_controller.rb:10:in `create'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.3ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:21:32 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9KMK9ukndWASbXAGGxqlcNLIFDbmM5l7lRH3Hv7mBzxG8hrrtEZPDlk9b/GZAJkENt5exQ8L8Ff7RpGMGiqhMQ==", "user"=>{"account_name"=>"aaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = 1[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.9ms)
+
+NameError (undefined local variable or method `id' for #<SignupController:0x00007ff83636e940>):
+  app/controllers/signup_controller.rb:9:in `create'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.1ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:22:00 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9KMK9ukndWASbXAGGxqlcNLIFDbmM5l7lRH3Hv7mBzxG8hrrtEZPDlk9b/GZAJkENt5exQ8L8Ff7RpGMGiqhMQ==", "user"=>{"account_name"=>"aaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "commit"=>"Submit"}
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = 1
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'research_interest_users'):
+  app/controllers/signup_controller.rb:9:in `create'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateResearchInterestUsers (20211202010917)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "research_interest_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211202010917"]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='ru_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ru_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='ur_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ur_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:22:50 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9KMK9ukndWASbXAGGxqlcNLIFDbmM5l7lRH3Hv7mBzxG8hrrtEZPDlk9b/GZAJkENt5exQ8L8Ff7RpGMGiqhMQ==", "user"=>{"account_name"=>"aaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaa' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aa' LIMIT 1[0m
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 18.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:23:06 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"16HnXQXKvPlXVX0eeHZil/GtS6BwVt5r3vIipGpSTd5l8PdAWKuGlxwFYun6bF7jFbsBU5lut0ewpUQ2jp7r0w==", "user"=>{"account_name"=>"aaaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aaa", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "mentor"=>"1", "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.2ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" IN (1, 2)[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaaa' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aaa' LIMIT 1[0m
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 321ms (Views: 15.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:23:11 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/E2MAaQlsgwANuFLVYLPKwqOxRU1xKMXOm0QJEHWMttoCYtW/GspntQxHKvTDdISDxx573ve6AyvtLSdcv+xg==", "user"=>{"account_name"=>"aaaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aaaaa", "phone"=>"123", "research_interest_ids"=>["1", "2", ""]}, "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.2ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" IN (1, 2)[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaaa' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aaaaa' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaaa' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aaaaa' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_name", "aaaaaa"], ["password_digest", "$2a$12$TK1Gybf3lRAZH.Uilv1qQeeaauEGB/NKX3RpMY3d8HIx5..zPEWte"], ["first_name", "aa"], ["last_name", "aa"], ["organization", "a"], ["email", "a@aaaaa"], ["phone", "123"], ["created_at", "2021-12-02 01:23:11.473410"], ["updated_at", "2021-12-02 01:23:11.473410"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "research_interests_users" ("research_interest_id", "user_id") VALUES (?, ?)  [["research_interest_id", 1], ["user_id", 10]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "research_interests_users" ("research_interest_id", "user_id") VALUES (?, ?)[0m  [["research_interest_id", 2], ["user_id", 10]]
+  [1m[35m (4.0ms)[0m  commit transaction
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 317ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 01:23:11 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 01:23:11 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 01:24:11 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 01:24:12 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"98ZS4MQp4/eSKF63tLxPZvz8aFRHk+W3NegV4CTl+J5Fl0L9mUjZmdl4QUA2pnMSGOoip66rjJtbv3NywClekw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered my_account/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:24:20 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nQUsvbLBBGyeqpaGVLNnuffsVRBKYQe4RuKYmnS4Of4vVDyg76A+AtX6iXHWqVvNE/of46NZbpQotf4IkHSf8w==", "user"=>{"account_name"=>"aaaaaaaaaaa", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa1", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "mentor"=>"1", "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.2ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "research_interest_users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2021-12-02 01:24:20.536443"], ["updated_at", "2021-12-02 01:24:20.536443"]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaaaaaaaa' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aa1' LIMIT 1
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 36ms (Views: 18.7ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:24:24 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x7n6Z/Z9msgR5dQ+9eEESWD5EkVWsr9Sbu1dMN3m38p16Op6qxygplq1y8l3+zg9hO9Ytr+K1n4AujuiOSp5xw==", "user"=>{"account_name"=>"aaaaaaaaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa1", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "commit"=>"Submit"}
+  [1m[35mResearchInterest Load (0.2ms)[0m  SELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "research_interest_users" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2021-12-02 01:24:24.505786"], ["updated_at", "2021-12-02 01:24:24.505786"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaaaaaaaa' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aa1' LIMIT 1[0m
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 326ms (Views: 15.6ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/signup" for 165.91.13.201 at 2021-12-02 01:24:28 +0000
+Processing by SignupController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JEWXOh0HuqtwFCMWvGWwo5QidTdCe4cOMbpBURteuBCWFIcnQGaAxTtEPOE+f4zXcDQ/xKtD7iJf7SfD/5IeHQ==", "user"=>{"account_name"=>"aaaaaaaaaaa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"aa", "last_name"=>"aa", "organization"=>"a", "email"=>"a@aa1", "phone"=>"123", "research_interest_ids"=>["1", ""]}, "commit"=>"Submit"}
+  [1m[36mResearchInterest Load (0.2ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" WHERE "research_interests"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "research_interest_users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2021-12-02 01:24:28.901195"], ["updated_at", "2021-12-02 01:24:28.901195"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaaaaaaaa' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aa1' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'aaaaaaaaaaa' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@aa1' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["account_name", "aaaaaaaaaaa"], ["password_digest", "$2a$12$bJfXReLGedexeyyNJyMyG.4lZWR5fg7OL3R/RM3uUp01s9QblPOse"], ["first_name", "aa"], ["last_name", "aa"], ["organization", "a"], ["email", "a@aa1"], ["phone", "123"], ["created_at", "2021-12-02 01:24:28.910162"], ["updated_at", "2021-12-02 01:24:28.910162"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "research_interests_users" ("research_interest_id", "user_id") VALUES (?, ?)[0m  [["research_interest_id", 1], ["user_id", 11]]
+  [1m[35m (3.6ms)[0m  commit transaction
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 320ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 165.91.13.201 at 2021-12-02 01:24:28 +0000
+
+
+Started GET "/announcements" for 165.91.13.201 at 2021-12-02 01:24:29 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered announcements/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/my_account" for 165.91.13.201 at 2021-12-02 01:26:19 +0000
+Processing by MyAccountController#new as HTML
+  Parameters: {"authenticity_token"=>"CFzTwa83ZFmmM3rLmWwFv2975dj6TxZOf0NSgnKJCii6DcPc8lZeN+1jZTwbdjnLi22vKxN3f2IRFDQQlkWsJQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered my_account/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.2ms)
