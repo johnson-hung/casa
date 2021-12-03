@@ -48,6 +48,7 @@
   <br/>
   <%= submit_tag "Update" , :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', announcements_path, :class => 'btn btn-secondary' %>
+  <!--FIXME: Only organizer can see these button-->
   <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Post announcement', announcements_path, :class => 'btn btn-secondary' end %>
   <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Edit announcement', announcements_path, :class => 'btn btn-secondary' end %>
   <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Post event', announcements_path, :class => 'btn btn-secondary' end %>
