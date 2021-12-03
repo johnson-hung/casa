@@ -1,0 +1,17 @@
+<h2>Post an Event</h2>
+
+<%= form_tag new_event_path, :class => 'form' do %>
+  <%= label :event, :name, 'Conference', :class => 'col-form-label' %>
+  <%= text_field :event, :name, :class => 'form-control' %>
+  
+  <%= label :event, :location, 'Location', :class => 'col-form-label' %>
+  <%= text_field :event, :location, :class => 'form-control' %>
+
+  <%= label :event, :start_at, 'Starting Date', :class => 'col-form-label'  %>
+  <%= date_select :event, :start_at, {}, :class => 'form-control col-2 d-inline' %>
+  
+  <p></p>
+  
+  <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', events_path, :class => 'btn btn-secondary' %>
+<% end %>

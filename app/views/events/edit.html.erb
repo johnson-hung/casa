@@ -1,0 +1,40 @@
+<h2>Edit Existing Event</h2>
+<%= form_tag edit_event_path(@event), :method => :put do %>
+  <%= label :event, :name, 'Name', :class => 'col-form-label' %>
+  <%= text_field :event, 'name', :class => 'form-control' %>
+  
+  <%= label :event, :location, 'Location', :class => 'col-form-label' %>
+  <%= text_field :event, 'location', :class => 'form-control' %>
+
+  <%= label :event, :start_at, 'Starting Date', :class => 'col-form-label'  %>
+  <%= date_select :event, :start_at, {}, :class => 'form-control col-2 d-inline' %>
+  <br/>
+  
+  <br/>
+  <h3>Check Sign-Up Info</h3>
+  <!% Need MVC for event signup. Display the people that signed up here  %>
+  
+  
+  <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
+
+<!%=one way to export csv if event signup is done%> 
+<!%=
+require 'csv'
+ 
+file = "#{Rails.root}/public/event.csv"
+ 
+table = Event.all;0 # ";0" stops output.  Change "Event" to any model.
+ 
+CSV.open( file, 'w' ) do |writer|
+  writer << table.first.attributes.map { |a,v| a }
+  table.each do |s|
+    writer << s.attributes.map { |a,v| v }
+  end
+end
+%>
+  
+  <br/>
+  <%= link_to 'Delete', event_path(@event), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %>
+  <%= submit_tag 'Update Event Info', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', events_path, :class => 'btn btn-secondary' %>
+<% end %>
