@@ -1,6 +1,6 @@
 <h2>Post an Event</h2>
 
-<%= form_tag events_show_path, :class => 'form' do %>
+<%= form_tag new_event_path, :class => 'form' do %>
   <%= label :event, :name, 'Conference', :class => 'col-form-label' %>
   <%= text_field :event, :name, :class => 'form-control' %>
   

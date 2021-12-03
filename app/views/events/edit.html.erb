@@ -1,5 +1,5 @@
 <h2>Edit Existing Event</h2>
-<%= form_tag events_edit_path(@event), :method => :put do %>
+<%= form_tag edit_event_path(@event), :method => :put do %>
   <%= label :event, :name, 'Name', :class => 'col-form-label' %>
   <%= text_field :event, 'name', :class => 'form-control' %>
   
@@ -9,6 +9,10 @@
   <%= label :event, :start_at, 'Starting Date', :class => 'col-form-label'  %>
   <%= date_select :event, :start_at, {}, :class => 'form-control col-2 d-inline' %>
   <br/>
+  
+  <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
+  <br/>
+  <%= link_to 'Delete', event_path(@event), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %>
   <%= submit_tag 'Update Event Info', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', events_path, :class => 'btn btn-secondary' %>
 <% end %>

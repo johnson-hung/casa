@@ -46,6 +46,7 @@ class AnnouncementsController < ApplicationController
       redirect_to :e_sort => e_sort and return
     end
     @events = Event.all.order(ordering);
+    # events.save!
   end 
     
   def new

@@ -1,20 +1,16 @@
 <!--  app/views/events/show.html.erb -->
-<h2>Details about <em><%= @event.title %></em></h2>
+<h2>Details about <em><%= @event.name %></em></h2>
 
 <ul id="details">
   <li>
-    Author:
-    <%= @event.author %>
-  </li>
-  <li>
-    Released on:
-    <%= @event.release_date.strftime("%B %d, %Y") %>
+    Starting Date:
+    <%= @event.start_at.strftime("%B %d, %Y") %>
   </li>
 </ul>
 
-<h3>Description:</h3>
-<p id="description">
-  <%= @event.description %>
+<h3>Location:</h3>
+<p id="location">
+  <%= @event.location %>
 </p>
 
 <div class="row">
