@@ -1,0 +1,2 @@
+module ResearchInterestsHelper
+end

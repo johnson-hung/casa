@@ -1,0 +1,59 @@
+<h1>My Account</h1>
+
+
+<% if flash[:alert] %>
+  <% flash[:alert].each do |message| %>
+    <%= message%> <br>
+  <% end %>
+<% end %>
+
+<%= form_tag edit_user_path(current_user), :method => :patch  do %>
+  <%= label :user, :account_name, 'User Name', :class => 'col-form-label' %>
+  <%= text_field :user, :account_name, :class => 'form-control' ,:value => current_user.account_name %>
+  
+  <%= label :user, :first_name, 'First Name', :class => 'col-form-label' %>
+  <%= text_field :user, :first_name, :class => 'form-control' ,:value => current_user.first_name %>
+  
+  <%= label :user, :last_name, 'Last Name', :class => 'col-form-label' %>
+  <%= text_field :user, :last_name, :class => 'form-control' ,:value => current_user.last_name %>
+  
+  <%= label :user, :organization, 'University/ Company', :class => 'col-form-label' %>
+  <%= text_field :user, :organization, :class => 'form-control' ,:value => current_user.organization %>
+  
+  <%= label :user, :email, 'Email', :class => 'col-form-label' %>
+  <%= text_field :user, :email, :class => 'form-control',:value => current_user.email %>
+  
+  <%= label :user, :phone, 'Phone', :class => 'col-form-label' %>
+  <%= text_field :user, :phone, :class => 'form-control' ,:value => current_user.phone %>
+ 
+  
+  <%= label :user,  "Research Interests" %><br />
+
+  <%= collection_check_boxes :user,:research_interest_ids, ResearchInterest.all, :id, :field do |b| %>
+    <div class="collection-check-box">
+      <%= if @select_research_interest then if @select_research_interest.include?(b.value) then b.check_box(checked: true) else b.check_box end  else b.check_box end %>
+      <%= b.label %>
+    </div>
+  <% end %>
+ <br/>
+
+ <br/>
+  
+  <%= label :user, :mentor, 'Mentor', :class => 'col-form-label'%>
+  <%= check_box_tag "mentor", "1"%>
+  
+  <%= label :user, :mentee, 'Mentee'%>
+  <%= check_box_tag "mentee", "1"%>
+  
+  <br/>
+  <%= submit_tag "Update" , :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', announcements_path, :class => 'btn btn-secondary' %>
+  <!--FIXME: Only organizer can see these button-->
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Post announcement', announcements_path, :class => 'btn btn-secondary' end %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Edit announcement', announcements_path, :class => 'btn btn-secondary' end %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Post event', announcements_path, :class => 'btn btn-secondary' end %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Edit event', announcements_path, :class => 'btn btn-secondary' end %>
+  <%= if current_user.email == "philip0227@tamu.edu"  then link_to 'Export csv', announcements_path, :class => 'btn btn-secondary' end %>
+  
+<% end %>
+

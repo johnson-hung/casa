@@ -61,6 +61,7 @@ class AnnouncementsController < ApplicationController
 
   def edit
     @announcement = Announcement.find params[:id]
+   
   end
 
   def update
