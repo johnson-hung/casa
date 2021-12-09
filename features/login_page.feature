@@ -53,3 +53,111 @@ Scenario: Existing user login successful and redirect successful
   Then I should see "Successfully logged out"
   And I should not see "Log out"
   And I should see "Login"
+  
+Scenario: check my account button 
+  Given I am on the user login page
+  Then I fill in "Email" with "mentor1@tamu.edu"
+  And I fill in "Password" with "password"
+  When I press "Log in"
+  Then I should see "Login successful"
+  And I am on the CALM home page
+  And I should see "My account"
+  And I should see "mentor1@tamu.edu"
+  When I click on the "My account" button
+  Then I am on the user account page for "mentor1@tamu.edu"
+  And the "Email" field should contain "mentor1@tamu.edu"
+  And the "User Name" field should contain "mentor1"
+  
+
+Scenario: Check if user is organizer and creat/edit annoucement
+  Given I am on the user login page
+  Then I fill in "Email" with "mentor1@tamu.edu"
+  And I fill in "Password" with "password"
+  When I press "Log in"
+  Then I should see "Login successful"
+  And I should see "Add Announcement"
+  And I should see "Add Event"
+  
+  # see if user can post annoucement 
+  When I click on the "Add Announcement" button
+  Then I should see "Post an Announcement"
+  And I should see "Title"
+  And I should see "Author"
+  And I should see "Content"
+  
+  # if user will be directed back to homepage after submit add announcements 
+  When I click on the "Cancel" button 
+  Then I am on the CALM home page
+  
+  When I click on the "Add Announcement" button
+  Then I fill in "Title" with "Testing"
+  When I press "Save Changes"
+  Then I am on the CALM home page
+  And I should see "Testing"
+  
+  # check if uer can edit the annoucement
+  # we don't know which edit button this line actually going into
+  When I click on the "Edit" button
+  Then I should see "Edit Existing Announcement"
+  And the "Title" field should contain "Testing"
+  
+  When I click on the "Delete" button
+  Then I should see "Announcement 'Testing' deleted."
+  And I am on the CALM home page
+  And I should not see "Testing"
+  
+  
+Scenario: Check if user is organizer and create/edit event
+  Given I am on the user login page
+  Then I fill in "Email" with "mentor1@tamu.edu"
+  And I fill in "Password" with "password"
+  When I press "Log in"
+  Then I should see "Login successful"
+  And I should see "Add Announcement"
+  And I should see "Add Event"
+  
+  #check adding events
+  When I click on the "Add Event" button
+  Then I should see "Post an Event"
+  And I should see "Conference"
+  And I should see "Location"
+  
+  When I click on the "Cancel" button 
+  Then I am on the CALM home page
+  
+  When I click on the "Add Event" button
+  When I fill in "Conference" with "Event Test"
+  And I fill in "Location" with "CS"
+  When I press "Save Changes"
+  Then I should see "was successfully created."
+  And I am on the CALM home page
+  And I should see "Event Test"
+  And I should see "CS"
+  
+  # check editing events
+  When I click on the "Edit" button 
+  Then I should see "Edit Existing Event"
+  And I should see "Name"
+  And I should see "Location"
+  And the "Name" field should contain "Event Test"
+  When I press "Update Event Info"
+  Then I should see "was successfully updated."
+  # delete events
+  When I click on the "Delete" button
+  Then I should see "deleted."
+  And I am on the CALM home page
+
+Scenario: tryint to edit a random event
+  Given I am on the user login page
+  Then I fill in "Email" with "mentor1@tamu.edu"
+  And I fill in "Password" with "password"
+  When I press "Log in"
+  Then I should see "Login successful"
+  
+  # Given I am on the edit event page for "ISCA"
+  # Then the "Name" field should contain "ISCA"
+  
+  
+  
+  
+  

@@ -89,4 +89,8 @@ When /^(?:|I )check "([^"]*)"$/ do |field|
   check(field)
 end
 
+Then /^the "([^\"]*)" field should contain "([^\"]*)"$/ do |field, value|
+  field_labeled(field).value.should =~ /#{value}/
+end
+
 
