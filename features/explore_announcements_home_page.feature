@@ -18,6 +18,32 @@ Background: announcements have been added to database
 Scenario: see an announcements
   Given I am on the home page 
   Then I should see "Announcement_1"
+  
+Scenario: login button exist
+  Given I am on the home page
+  Then I should see "Login"
+  
+Scenario: login button is redirectable
+  When I click on the "Login" button
+  Then I should be on the user login page
+  And I should see "Password"
+  
+
+Scenario: Signup button exist 
+  Given I am on the home page
+  Then I should see "Signup"
+  And I should not see "Log out"
+  
+Scenario: Signup button is redirectable
+  # When I click on the "Signup" button
+  When I click on the "Signup" button
+  Then I should be on the user Signup page
+  And I should see "User Sign Up"
+  
+  
+
+# Scenario: should not see 
+
 
 #Scenario: sort movies alphabetically
 #  When I follow "Movie Title"

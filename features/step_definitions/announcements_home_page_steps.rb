@@ -20,9 +20,23 @@ Given /the following announcements exist/ do |announcements_table|
   # fail "Unimplemented"
 end
 
+Given /the following users exist/ do |users_table|
+  users_table.hashes.each do |users|
+    # each returned element will be a hash whose key is the table header.
+    # you should arrange to add that movie to the database here.
+    User.create!(users)
+  end
+  # fail "Unimplemented"
+end
+
 Then /(.*) seed announcements should exist/ do | n_seeds |
   # Movie.count.should be n_seeds.to_i
   expect(Announcement.count).to eq n_seeds.to_i
+end
+
+Then /(.*) seed users should exist/ do | n_seeds |
+  # Movie.count.should be n_seeds.to_i
+  expect(User.count).to eq n_seeds.to_i
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
@@ -33,6 +47,46 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
+Then /^(?:|I )should not see "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_no_content(text)
+  else
+    assert page.has_no_content?(text)
+  end
+end
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
+
+When /^(?:|I )press "([^"]*)"$/ do |button|
+  click_button(button)
+end
+
+When /I click on the "(.+)" button/ do |button|
+  page.click_link button
+end
+
+
+When /^(?:|I )go to (.+)$/ do |page_name|
+  visit path_to(page_name)
+end
+
+Then /^(?:|I )should be on (.+)$/ do |page_name|
+  current_path = URI.parse(current_url).path
+  if current_path.respond_to? :should
+    current_path.should == path_to(page_name)
+  else
+    assert_equal path_to(page_name), current_path
+  end
+end
+
+When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
+
+When /^(?:|I )check "([^"]*)"$/ do |field|
+  check(field)
+end
+
+

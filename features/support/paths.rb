@@ -42,8 +42,13 @@ module NavigationHelpers
       movie_path(movie)
       
       
-    when /^the Similar Movies page for "(.+)"/
-      search_similar_movies_path($1)
+    when /^the user Signup page$/
+      # signup_url
+      signup_path
+
+    when /^the user login page$/
+      login_path
+      
 
     else
       begin
