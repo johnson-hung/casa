@@ -1,5 +1,10 @@
 <h1>My Account</h1>
 
+<% if is_organizer %>
+  <div class="text-info">
+    <h3>[ Organizer ]</h3>
+  </div>
+<% end  %>
 
 <% if flash[:alert] %>
   <% flash[:alert].each do |message| %>
