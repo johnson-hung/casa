@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20211202010917) do
+ActiveRecord::Schema.define(version: 20211210191009) do
 
   create_table "announcements", force: :cascade do |t|
     t.string   "title"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 20211202010917) do
     t.integer  "mentee"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "organizer"
   end
 
 end
