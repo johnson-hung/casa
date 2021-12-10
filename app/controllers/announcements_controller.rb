@@ -1,5 +1,6 @@
 class AnnouncementsController < ApplicationController
-
+  before_action :current_user
+  
   def show
     id = params[:id] # retrieve announcement ID from URI route
     @announcement = Announcement.find(id) # look up announcement by unique ID

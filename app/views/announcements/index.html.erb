@@ -5,12 +5,12 @@
 </p>
 
 
-<% if current_user %>
+<% if @current_user %>
 
 <p align="right">
-<%= current_user.email %>
+<%= @current_user.email %>
 <%= link_to "Log out", logout_path, method: "post", :class => 'btn btn-primary pull-right' %>
-<%= link_to "My account", edit_user_url(current_user), :class => 'btn btn-primary pull-right' %>
+<%= link_to "My account", edit_user_url(@current_user), :class => 'btn btn-primary pull-right' %>
 </p>
   
 <% else %>
@@ -57,8 +57,7 @@
         </td>
         
         <td class="text-nowrap" style="width: 10%;">
-          <!-- TBD (should check if user is organizer) -->
-          <% if current_user %>
+          <% if is_organizer %>
           <div class="text-center">
             <%= link_to 'Edit', edit_announcement_path(announcement), :class => 'btn btn-primary' %>
           </div>
@@ -69,8 +68,7 @@
   </tbody>
 </table>
 
-<!-- TBD (should check if user is organizer) -->
-<% if current_user %>
+<% if is_organizer %>
 <div class="col-md-12 text-center">
   <%= link_to 'Add Announcement', new_announcement_path, :class => 'btn btn-primary' %>
 </div>
@@ -116,8 +114,7 @@
           <%= event.start_at %>
         </td>
         <td>
-          <!-- TBD (should check if user is organizer) -->
-          <% if current_user %>
+          <% if is_organizer %>
           <div class="text-center">
             <%= link_to 'Edit', edit_event_path(event), :class => 'btn btn-primary' %>
           </div>
@@ -128,15 +125,14 @@
   </tbody>
 </table>
 
-<!-- TBD (should check if user is organizer) -->
-<% if current_user %>
+<% if is_organizer %>
 <div class="col-md-12 text-center">
   <%= link_to 'Add Event', new_event_path, :class => 'btn btn-primary' %>
 </div>
 <% end %>
 
 
-<% if current_user %>
+<% if @current_user %>
 <h2>Can see this if logged in</h2>
   <%= text_field :announcement, :title, :class => 'form-control' %>
 <% end %>

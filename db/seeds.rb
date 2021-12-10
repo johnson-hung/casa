@@ -39,6 +39,7 @@ users = [
         {:account_name => 'mentor1', :password => 'password', :first_name => 'mentor1', :last_name => 'mentor1', :organization => 'Texas A&M', :email => 'mentor1@tamu.edu', :phone => '1234567890', :mentor => 1, :mentee => 0},
         {:account_name => 'mentor2', :password => 'password', :first_name => 'mentor2', :last_name => 'mentor2', :organization => 'Texas A&M', :email => 'mentor2@tamu.edu', :phone => '1234567890', :mentor => 1, :mentee => 0},
         {:account_name => 'mentee1', :password => 'password', :first_name => 'mentee1', :last_name => 'mentee1', :organization => 'Texas A&M', :email => 'mentee1@tamu.edu', :phone => '1234567890', :mentor => 0, :mentee => 1},
+        {:account_name => 'organizer', :password => 'organizer', :first_name => 'organizer', :last_name => 'organizer', :organization => 'Texas A&M', :email => 'organizer@tamu.edu', :phone => '1234567890', :mentor => 0, :mentee => 1, :organizer => 1},
     ]
 
 users.each do |user|
