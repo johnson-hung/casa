@@ -1,0 +1,23 @@
+<h2>Sign Up For Event </h2>
+
+<% if flash[:alert] %>
+  <%= flash[:alert] %> 
+<% end %>
+
+<h3>
+  Please Verify Your Information 
+</h3>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Name: <%= @current_user.account_name %></li>
+  <li class="list-group-item">Email: <%= @current_user.email %></li>
+  <li class="list-group-item">Research Interests:
+<% @current_user.research_interests.each do |ri|%>
+  <%= ri.field %>
+<% end %></li>
+  <li class="list-group-item">University: <%= @current_user.organization %></li>
+</ul>
+
+<div class="mx-auto" >
+<%= link_to 'Make Change', edit_user_path(@current_user), :class => 'btn btn-primary float-left p-2'  %>
+<%= button_to "Submit", {controller: "events_signup", action: "create", event_id: params['event_id']}, {class: 'btn btn-primary float-left p-2'}%>
+</div>

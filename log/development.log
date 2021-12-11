@@ -8057,3 +8057,2475 @@ Processing by AnnouncementsController#index as HTML
   Rendered announcements/index.html.erb within layouts/application (2.8ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddOrganizerToUser (20211210191009)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "organizer" integer[0m
+  [1m[35mSQL (6.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211210191009"]]
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='ru_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ru_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='ur_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ur_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='ru_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ru_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='ur_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='ur_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_events_on_event_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "announcements" ("title", "author", "rating", "release_date") VALUES (?, ?, ?, ?)[0m  [["title", "Announcement_1"], ["author", "Name_1"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "announcements" ("title", "author", "rating", "release_date") VALUES (?, ?, ?, ?)  [["title", "Announcement_2"], ["author", "Name_2"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "announcements" ("title", "author", "rating", "release_date") VALUES (?, ?, ?, ?)[0m  [["title", "Announcement_3"], ["author", "Name_3"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "events" ("name", "location", "start_at", "end_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "ISCA"], ["location", "New York"], ["start_at", "2000-06-21 00:00:00.000000"], ["end_at", "2022-06-21 00:00:00.000000"], ["created_at", "2021-12-11 17:34:38.771301"], ["updated_at", "2021-12-11 17:34:38.771301"]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "location", "start_at", "end_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "HPCA"], ["location", "Denver"], ["start_at", "2001-06-21 00:00:00.000000"], ["end_at", "2025-06-21 00:00:00.000000"], ["created_at", "2021-12-11 17:34:38.779898"], ["updated_at", "2021-12-11 17:34:38.779898"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "location", "start_at", "end_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "ASPLOS"], ["location", "Seattle"], ["start_at", "2002-06-21 00:00:00.000000"], ["end_at", "2032-06-21 00:00:00.000000"], ["created_at", "2021-12-11 17:34:38.784763"], ["updated_at", "2021-12-11 17:34:38.784763"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'mentor1' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mentor1@tamu.edu' LIMIT 1
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "mentor", "mentee", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_name", "mentor1"], ["password_digest", "$2a$12$54Uql/azAYkODDFSRTrXceL0JRqL3laWMUCs515tRi4cv/5IzPToS"], ["first_name", "mentor1"], ["last_name", "mentor1"], ["organization", "Texas A&M"], ["email", "mentor1@tamu.edu"], ["phone", "1234567890"], ["mentor", 1], ["mentee", 0], ["created_at", "2021-12-11 17:34:39.130315"], ["updated_at", "2021-12-11 17:34:39.130315"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'mentor2' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mentor2@tamu.edu' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "mentor", "mentee", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["account_name", "mentor2"], ["password_digest", "$2a$12$UeORwhxba012WOhK1ZO1ze9m5JYEb9wz1H5E6ZJ9CASlqtoGqjro."], ["first_name", "mentor2"], ["last_name", "mentor2"], ["organization", "Texas A&M"], ["email", "mentor2@tamu.edu"], ["phone", "1234567890"], ["mentor", 1], ["mentee", 0], ["created_at", "2021-12-11 17:34:39.471578"], ["updated_at", "2021-12-11 17:34:39.471578"]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'mentee1' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mentee1@tamu.edu' LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "mentor", "mentee", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["account_name", "mentee1"], ["password_digest", "$2a$12$P4OJ2WJxqad2JQA2Z9IrseOk3zw5qs7sjvxVMsa7vROx2I0BgDaB6"], ["first_name", "mentee1"], ["last_name", "mentee1"], ["organization", "Texas A&M"], ["email", "mentee1@tamu.edu"], ["phone", "1234567890"], ["mentor", 0], ["mentee", 1], ["created_at", "2021-12-11 17:34:39.803010"], ["updated_at", "2021-12-11 17:34:39.803010"]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."account_name" = 'organizer' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'organizer@tamu.edu' LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "users" ("account_name", "password_digest", "first_name", "last_name", "organization", "email", "phone", "mentor", "mentee", "organizer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["account_name", "organizer"], ["password_digest", "$2a$12$HrKhO9iztGCumDoaUMYWQ.bInNyFYFQZi4mMJ74YqLBAUyHAjfLFq"], ["first_name", "organizer"], ["last_name", "organizer"], ["organization", "Texas A&M"], ["email", "organizer@tamu.edu"], ["phone", "1234567890"], ["mentor", 0], ["mentee", 1], ["organizer", 1], ["created_at", "2021-12-11 17:34:40.136827"], ["updated_at", "2021-12-11 17:34:40.136827"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 17:36:50 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 17:36:50 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_flash.erb (5.9ms)
+Completed 200 OK in 702ms (Views: 671.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/research_interests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/shoes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/shoes.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/research_interests.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/sessions.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/signup.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/assets/scaffolds.self-1a9f067b5e48b7a17eee3682bb656ab42a8a3550da9137de7c6667b883f72d8b.css?body=1" for 165.91.13.12 at 2021-12-11 17:36:51 +0000
+
+
+Started GET "/signup" for 165.91.13.12 at 2021-12-11 17:36:59 +0000
+Processing by SignupController#new as HTML
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered signup/new.html.erb within layouts/application (60.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 125.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 165.91.13.12 at 2021-12-11 17:38:12 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.12 at 2021-12-11 17:38:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xB6EtfsPJSirl2rAW0AaCoBCvNjKtmuPEkDrg+QPjm/KUzyO3yPKH6bAGMPOoBHqc47GNwoFMztAP2KIIlaPqQ==", "session"=>{"email"=>"philip0227@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "philip0227@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 312ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 17:38:24 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 17:38:24 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 6]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 39.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/1/signup" for 165.91.13.12 at 2021-12-11 17:38:30 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.2ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 46.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/events/1/signup?form_class=btn+btn-primary+pull-right+" for 165.91.13.12 at 2021-12-11 17:38:39 +0000
+Processing by EventsSignupController#create as HTML
+  Parameters: {"authenticity_token"=>"Pft9UQpmwxM31gvz2nxVBDWp+Owyc++zFCHQhTfY+nkztsVqLkosJDqBefBPnF7kxmWCA/LAtwdGXlmO8YH7vw==", "form_class"=>"btn btn-primary pull-right ", "event_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["event_id", 1], ["created_at", "2021-12-11 17:38:39.597467"], ["updated_at", "2021-12-11 17:38:39.597467"]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 15ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 17:38:39 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 17:38:39 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:39:35 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 165.91.13.12 at 2021-12-11 17:39:42 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered users/edit.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/6" for 165.91.13.12 at 2021-12-11 17:40:00 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered users/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/6" for 165.91.13.12 at 2021-12-11 17:40:19 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered users/edit.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:44:49 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:46:52 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:47:23 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:48:09 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:48:33 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 165.91.13.12 at 2021-12-11 17:48:42 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  [1m[36mResearchInterest Load (4.2ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered users/edit.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 46ms (Views: 38.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:48:50 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:49:41 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (4.3ms)
+Completed 200 OK in 55ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:49:46 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:50:06 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:50:08 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:51:00 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:24: syntax error, unexpected ':', expecting =>
+...'btn btn-primary pull-right'} :class => 'btn btn-primary pul...
+...                              ^):
+  app/views/events_signup/new.html.erb:24: syntax error, unexpected ':', expecting =>
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.4ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:51:22 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:24: syntax error, unexpected ')', expecting =>
+... 'btn btn-primary pull-right'});@output_buffer.to_s
+...                              ^
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:25: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:27: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  app/views/events_signup/new.html.erb:24: syntax error, unexpected ')', expecting =>
+  app/views/events_signup/new.html.erb:25: syntax error, unexpected ensure, expecting ')'
+  app/views/events_signup/new.html.erb:27: syntax error, unexpected end, expecting ')'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.1ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:52:42 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:24: syntax error, unexpected ')', expecting =>
+...'btn btn-primary pull-right'} );@output_buffer.to_s
+...                              ^
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:25: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:27: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  app/views/events_signup/new.html.erb:24: syntax error, unexpected ')', expecting =>
+  app/views/events_signup/new.html.erb:25: syntax error, unexpected ensure, expecting ')'
+  app/views/events_signup/new.html.erb:27: syntax error, unexpected end, expecting ')'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:53:37 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:24: syntax error, unexpected ')', expecting =>
+...orm', class: 'btn btn-small'} );@output_buffer.to_s
+...                              ^
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:25: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:27: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  app/views/events_signup/new.html.erb:24: syntax error, unexpected ')', expecting =>
+  app/views/events_signup/new.html.erb:25: syntax error, unexpected ensure, expecting ')'
+  app/views/events_signup/new.html.erb:27: syntax error, unexpected end, expecting ')'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.0ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:54:18 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:54:43 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:24: syntax error, unexpected =>
+...d: params['event_id'], class => 'btn btn-primary pull-right ...
+...                             ^~):
+  app/views/events_signup/new.html.erb:24: syntax error, unexpected =>
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.7ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:55:58 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:24: syntax error, unexpected =>
+... params['event_id']}, {class => 'btn btn-primary pull-right ...
+...                             ^~
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:24: syntax error, unexpected '}', expecting ')'
+... 'btn btn-primary pull-right '});@output_buffer.to_s
+...                              ^
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:25: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:27: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  app/views/events_signup/new.html.erb:24: syntax error, unexpected =>
+  app/views/events_signup/new.html.erb:24: syntax error, unexpected '}', expecting ')'
+  app/views/events_signup/new.html.erb:25: syntax error, unexpected ensure, expecting ')'
+  app/views/events_signup/new.html.erb:27: syntax error, unexpected end, expecting ')'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:56:33 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:25: syntax error, unexpected =>
+... params['event_id']}, {class => 'btn btn-primary pull-right ...
+...                             ^~
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:25: syntax error, unexpected '}', expecting ')'
+... 'btn btn-primary pull-right '});@output_buffer.to_s
+...                              ^
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:26: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:28: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  app/views/events_signup/new.html.erb:25: syntax error, unexpected =>
+  app/views/events_signup/new.html.erb:25: syntax error, unexpected '}', expecting ')'
+  app/views/events_signup/new.html.erb:26: syntax error, unexpected ensure, expecting ')'
+  app/views/events_signup/new.html.erb:28: syntax error, unexpected end, expecting ')'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:56:40 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (22.4ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `idea' for #<#<Class:0x00007f8d986c1ce0>:0x00007f8d98e823a8>):
+    21: 
+    22: <%= link_to 'Make Change', edit_user_path(@current_user), :class => 'btn btn-primary pull-right '  %>
+    23: </br>
+    24: <%= button_to "Claim", {action: "claim", idea_id: idea.id, remote: true}, {class: 'btn btn-small'} %>
+  app/views/events_signup/new.html.erb:24:in `_app_views_events_signup_new_html_erb__2684620706998428527_70123066231100'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.7ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:57:23 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (21.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `idea' for #<#<Class:0x00007f8d986c1ce0>:0x00007f8d9864dbb0>):
+    21: 
+    22: <%= link_to 'Make Change', edit_user_path(@current_user), :class => 'btn btn-primary pull-right '  %>
+    23: </br>
+    24: <%= button_to "Claim", {action: "claim", idea_id: idea.id, remote: true}, {class: 'btn btn-small'} %>
+    25: //<%= button_to "Submit", {controller: "events_signup", action: "create", event_id: params['event_id']}, {class: 'btn btn-primary pull-right '}%>
+  app/views/events_signup/new.html.erb:24:in `_app_views_events_signup_new_html_erb__2684620706998428527_70123061929220'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:57:32 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 165.91.13.12 at 2021-12-11 17:57:35 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:58:19 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:58:37 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:58:45 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 17:59:43 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:00:21 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:00:30 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:00:51 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:00:57 +0000
+Processing by EventsSignupController#create as HTML
+  Parameters: {"authenticity_token"=>"9hy9L5aMaQPOEN2wvUaqnlTWUxuc8zIe+XT3XFqXaqD4UQUUsqCGNMNHr7MopqF+pxop9FxAaqqrC35XnM5rZg==", "event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["event_id", 2], ["created_at", "2021-12-11 18:00:57.447150"], ["updated_at", "2021-12-11 18:00:57.447150"]]
+  [1m[35m (4.9ms)[0m  commit transaction
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 13ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:00:57 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:00:57 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 6]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/6" for 165.91.13.12 at 2021-12-11 18:01:00 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered users/edit.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:02:03 +0000
+Processing by EventsSignupController#create as HTML
+  Parameters: {"authenticity_token"=>"9hy9L5aMaQPOEN2wvUaqnlTWUxuc8zIe+XT3XFqXaqD4UQUUsqCGNMNHr7MopqF+pxop9FxAaqqrC35XnM5rZg==", "event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["event_id", 2], ["created_at", "2021-12-11 18:02:03.872249"], ["updated_at", "2021-12-11 18:02:03.872249"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 13ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:02:03 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:02:03 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 6]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/6" for 165.91.13.12 at 2021-12-11 18:02:08 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:03:41 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:1: syntax error, unexpected tLABEL
+...utput_buffer.append=( event_id: params['event_id']);@output_...
+...                      ^~~~~~~~~):
+  app/views/events_signup/new.html.erb:1: syntax error, unexpected tLABEL
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.6ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:04:42 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h2>Sign Up For <%= @event.name %> </h2>
+    2: 
+    3: <% if flash[:alert] %>
+    4:   <%= flash[:alert] %> 
+  app/views/events_signup/new.html.erb:1:in `_app_views_events_signup_new_html_erb__2684620706998428527_70123062844800'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.4ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:05:18 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `name' for #<UserEvent:0x00007f8d98e89e78>):
+    1: <h2>Sign Up For <%= @userEvent.name %> </h2>
+    2: 
+    3: <% if flash[:alert] %>
+    4:   <%= flash[:alert] %> 
+  app/views/events_signup/new.html.erb:1:in `_app_views_events_signup_new_html_erb__2684620706998428527_70123066245980'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.6ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:05:28 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:07:00 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/events_signup_controller.rb:6:in `new'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:07:22 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.8ms)
+
+NameError (undefined local variable or method `name' for #<EventsSignupController:0x00007f8d98f18f60>):
+  app/controllers/events_signup_controller.rb:6:in `new'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:07:32 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `find_by_name' for nil:NilClass):
+  app/controllers/events_signup_controller.rb:6:in `new'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:09:27 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `find_by_name' for nil:NilClass):
+  app/controllers/events_signup_controller.rb:6:in `new'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.5ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:09:51 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 53ms (Views: 37.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:10:04 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/models/user_event.rb:5:in `get_event_name'
+  app/controllers/events_signup_controller.rb:6:in `new'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:10:23 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 38.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:10:50 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0x00007f8dad04d7a0>:0x00007f8dad65df50>):
+    1: <h2>Sign Up For <%= name %> </h2>
+    2: 
+    3: <% if flash[:alert] %>
+    4:   <%= flash[:alert] %> 
+  app/views/events_signup/new.html.erb:1:in `_app_views_events_signup_new_html_erb__2684620706998428527_70123238144520'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.8ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:11:06 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 72ms (Views: 56.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:19:37 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms)
+
+NameError (undefined local variable or method `event' for #<EventsSignupController:0x00007f8dad27c990>
+Did you mean?  event_url):
+  app/controllers/events_signup_controller.rb:6:in `new'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:19:54 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:1: `@' without identifiers is not allowed as an instance variable name
+/home/ec2-user/environment/casa/app/views/events_signup/new.html.erb:1: syntax error, unexpected end-of-input
+...eeze;@output_buffer.append=( @ );@output_buffer.safe_append=...
+...                             ^~):
+  app/views/events_signup/new.html.erb:1: `@' without identifiers is not allowed as an instance variable name
+  app/views/events_signup/new.html.erb:1: syntax error, unexpected end-of-input
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.7ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:20:10 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 37.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:22:45 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 71ms (Views: 55.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:23:46 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:25:46 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:25:59 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:27:19 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:27:34 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:27:36 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:27:46 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:27:56 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:28:09 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:28:17 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:28:25 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:28:44 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:28:56 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:29:18 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:29:21 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:29:31 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:29:39 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:30:00 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:30:10 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:30:24 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:30:40 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:30:56 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:30:57 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:31:04 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:31:22 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:31:32 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/signup" for 165.91.13.12 at 2021-12-11 18:32:09 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/logout" for 165.91.13.12 at 2021-12-11 18:32:28 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XgPW5ugPx5CCwc6QDziqLbUMYuPJKzvl/RRhplzKiC5QTm7dzCMop4+WvJOa2KHNRsAYDAmYY1Gva+itmpOJ6A=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:32:28 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:32:28 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 165.91.13.12 at 2021-12-11 18:32:30 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.12 at 2021-12-11 18:33:05 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4an+blxUfUDmbRoacqEqTi7IoWCnG6Yi4lbzgJJP+8fv5EZVeHiSd+s6aBnnQSGu3QTbj2eo/pawKXqLVBb6AQ==", "session"=>{"email"=>"organizer@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "organizer@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 307ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:33:05 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:33:05 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.1ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:33:08 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:37:12 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:37:22 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:42:03 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 33.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:42:05 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:42:31 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:42:40 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:43:31 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.6ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 18:43:38 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3/edit" for 165.91.13.12 at 2021-12-11 18:43:42 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered events/edit.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3/edit" for 165.91.13.12 at 2021-12-11 18:43:46 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered events/edit.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 18:43:49 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:45:15 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 35.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:45:16 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:45:17 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 18:45:19 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3/edit" for 165.91.13.12 at 2021-12-11 18:45:21 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered events/edit.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 18:45:25 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 18:45:48 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3/edit" for 165.91.13.12 at 2021-12-11 18:45:52 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered events/edit.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3/edit" for 165.91.13.12 at 2021-12-11 18:45:53 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered events/edit.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 18:45:56 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:45:58 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:47:47 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 40.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:47:48 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:47:49 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:47:58 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:48:04 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:48:33 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:48:44 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:48:55 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:49:10 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for #<User:0x00007f8d98883f10>):
+    14:   <h3>Check Sign-Up Info</h3>
+    15:   <!% Need MVC for event signup. Display the people that signed up here  %>
+    16:   
+    17:  <%= User.find(UserEvent.find(@event.id).user_id).name%>
+    18: 
+    19:   
+    20:   <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
+  app/views/events/edit.html.erb:17:in `block in _app_views_events_edit_html_erb___4497738501339099996_70123062896780'
+  app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb___4497738501339099996_70123062896780'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:49:29 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.6ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 18:49:46 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 31.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/3/edit" for 165.91.13.12 at 2021-12-11 18:49:47 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 18:49:48 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 18:49:50 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 18:49:52 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 54ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/logout" for 165.91.13.12 at 2021-12-11 18:49:53 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g9zt0im+j3G8AtjIxjjrzWs7cr1zjOQ6gOz4ab7i1s2NkVXpDZJgRrFVqstT2OAtmPcIUrM/vI7Sk3FieLvXCw=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:49:53 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:49:53 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 165.91.13.12 at 2021-12-11 18:49:54 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.12 at 2021-12-11 18:50:03 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IcjFD7nnveN7XXqAzW3QEqwXz46ZrwcGgqMgGrrTxrkvhX00nctS1HYKCINYjdvyX9u1YVkcX7LQ3KkRfIrHfw==", "session"=>{"email"=>"a@a", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "a@a"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 307ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:50:03 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:50:03 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 7]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/signup" for 165.91.13.12 at 2021-12-11 18:50:05 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 7]]
+  Rendered events_signup/new.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/events/1/signup" for 165.91.13.12 at 2021-12-11 18:50:06 +0000
+Processing by EventsSignupController#create as HTML
+  Parameters: {"authenticity_token"=>"oeW7R+3xfUZluUJVXqoedWmQgMoIO8PQHXhkXwghgTavqAN8yd2ScWjuMFbLShWVmlz6JciIm2RPB+1UzniA8A==", "event_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT  1 AS one FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 7], ["event_id", 1], ["created_at", "2021-12-11 18:50:06.986857"], ["updated_at", "2021-12-11 18:50:06.986857"]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 14ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:50:07 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:50:07 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/logout" for 165.91.13.12 at 2021-12-11 18:50:09 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"glgApYW5xzNkxQgrTYGHy7IO1+E7Qs/pyNYgeng0QXmMFbieoZUoBGmSeijYYYwrQcKtDvvxl12aqalxvm1Avw=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:50:09 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:50:09 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.9ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 165.91.13.12 at 2021-12-11 18:50:10 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.12 at 2021-12-11 18:50:26 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dm4ZpWyTFpBckHK+VmO2ZEGJmSPFECHGebneybIW4iEAI6GeSL/5p1HHAL3Dg72EskXjzAWjeXIrxlfCdE/j5w==", "session"=>{"email"=>"organizer@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "organizer@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 309ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 18:50:27 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 18:50:27 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:50:29 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:50:31 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:50:58 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 18:50:59 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 18:51:01 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 18:51:03 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/3/edit" for 165.91.13.12 at 2021-12-11 18:51:04 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 18:51:05 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 18:51:46 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:51:48 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `user_ids' for #<UserEvent:0x00007f8d98d12db0>
+Did you mean?  user_id
+               user_id?
+               user_id=):
+    14:   <h3>Check Sign-Up Info</h3>
+    15:   <!% Need MVC for event signup. Display the people that signed up here  %>
+    16:   
+    17:  <%= User.find(UserEvent.find(@event.id).user_ids).first_name%>
+    18: 
+    19:   
+    20:   <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
+  app/views/events/edit.html.erb:17:in `block in _app_views_events_edit_html_erb___4497738501339099996_70123065315860'
+  app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb___4497738501339099996_70123065315860'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:51:56 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered events/edit.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 18:52:05 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `find_all' for #<Class:0x00007f8d98528460>
+Did you mean?  find_each):
+    14:   <h3>Check Sign-Up Info</h3>
+    15:   <!% Need MVC for event signup. Display the people that signed up here  %>
+    16:   
+    17:  <%= User.find(UserEvent.find_all(@event.id).user_id).first_name%>
+    18: 
+    19:   
+    20:   <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
+  app/views/events/edit.html.erb:17:in `block in _app_views_events_edit_html_erb___4497738501339099996_70123063527740'
+  app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb___4497738501339099996_70123063527740'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.3ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 21:06:39 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 21:06:39 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 329ms (Views: 258.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 21:06:46 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `find_all' for #<Class:0x00007f32349d37e0>
+Did you mean?  find_each):
+    14:   <h3>Check Sign-Up Info</h3>
+    15:   <!% Need MVC for event signup. Display the people that signed up here  %>
+    16:   
+    17:  <%= User.find(UserEvent.find_all(@event.id).user_id).first_name%>
+    18: 
+    19:   
+    20:   <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
+  app/views/events/edit.html.erb:17:in `block in _app_views_events_edit_html_erb__4130470104329830368_69926811707240'
+  app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb__4130470104329830368_69926811707240'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.9ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 21:08:29 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 21:08:33 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/17" for 165.91.13.12 at 2021-12-11 21:08:35 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 17]]
+  [1m[36mResearchInterest Load (0.1ms)[0m  [1mSELECT "research_interests".* FROM "research_interests"[0m
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 21:08:37 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/logout" for 165.91.13.12 at 2021-12-11 21:08:43 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1eYmg9vjD0Rp4aoSrktJ0NxDf3q0Z371Vc16EMaZ3Zbbq564/8/gc2S22BE7q0IwL48FlXTUJkEHsvMbAMDcUA=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 21:08:43 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 21:08:43 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.13.12 at 2021-12-11 21:08:44 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.12 at 2021-12-11 21:08:55 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yUk5Y0UC/hZKqMP6Q7M91Y7mcVjqg5qoItG8gpDL6jxaJzeqTjkz1R90Qx87scXpffjKqMZVt7y9M/5zBoubg==", "session"=>{"email"=>"philip0227@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "philip0227@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 279ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 21:08:56 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 21:08:56 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 6]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/3/signup" for 165.91.13.12 at 2021-12-11 21:08:58 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.2ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/3/signup" for 165.91.13.12 at 2021-12-11 21:12:37 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/logout" for 165.91.13.12 at 2021-12-11 21:12:40 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eMl2erpCFuVZFQ2qrxakZAUgq/Ta5TeNyB1VWLjBQtl2hM5Bnm750lRCf6k69q+E9uzRGxpWbzmaYtxTfphDHw=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 21:12:40 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 21:12:40 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.13.12 at 2021-12-11 21:12:48 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.12 at 2021-12-11 21:13:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tTdT+1bueoMOgOmkOSZgqoylGyQn8qcskYcxlL9FKOe7euvAcsKVtAPXm6esxmtKf2lhy+dB/5jD+LifeRwpIQ==", "session"=>{"email"=>"organizer@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "organizer@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 280ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 21:13:14 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 21:13:14 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 21:13:30 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `done' for #<#<Class:0x00007f3235897088>:0x00007f32355208c8>):
+    19:   
+    20:   <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
+    21: 
+    22: <%=one way to export csv if event signup is done%> 
+    23: <%=
+    24: require 'csv'
+    25:  
+  app/views/events/edit.html.erb:22:in `block in _app_views_events_edit_html_erb__4130470104329830368_69926809849560'
+  app/views/events/edit.html.erb:2:in `_app_views_events_edit_html_erb__4130470104329830368_69926809849560'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 21:13:42 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/edit.html.erb within layouts/application (30.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 21:13:59 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 21:14:03 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/edit.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 21:14:19 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 21:18:26 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 21:18:28 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 21:18:31 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/2/edit" for 165.91.13.12 at 2021-12-11 21:18:33 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT  "user_events".* FROM "user_events" WHERE "user_events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered events/edit.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 21:18:34 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/logout" for 165.91.13.12 at 2021-12-11 21:18:46 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"avG7IlwxQKY6Dxj+EdiWX/IuNX8r/jH08WHDU8A1gsNkvAMZeB2vkTdYav2EOJ2/AeJPkOtNaUCjHkpYBmyDBQ=="}
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 21:18:46 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 21:18:46 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 165.91.13.12 at 2021-12-11 21:18:47 +0000
+Processing by SignupController#new as HTML
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered signup/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 165.91.13.12 at 2021-12-11 21:18:50 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.12 at 2021-12-11 21:18:59 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N/9M6gLdQ2MAa+N+kiOlAq2oG0ExZnjztV/rH/TBdnE5svTRJvGsVA08kX0Hw67iXmRhrvHVIEfnIGIUMph3tw==", "session"=>{"email"=>"philip0227@tamu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "philip0227@tamu.edu"]]
+Redirected to https://53844dae66b6425a869037caa311d927.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 282ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 21:18:59 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 21:18:59 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/6" for 165.91.13.12 at 2021-12-11 21:19:01 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "research_interests".id FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests"
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/3/signup" for 165.91.13.12 at 2021-12-11 21:19:03 +0000
+Processing by EventsSignupController#new as HTML
+  Parameters: {"event_id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mResearchInterest Load (0.1ms)[0m  SELECT "research_interests".* FROM "research_interests" INNER JOIN "research_interests_users" ON "research_interests"."id" = "research_interests_users"."research_interest_id" WHERE "research_interests_users"."user_id" = ?  [["user_id", 6]]
+  Rendered events_signup/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)

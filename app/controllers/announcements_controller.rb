@@ -21,6 +21,9 @@ class AnnouncementsController < ApplicationController
     end
     @announcements = Announcement.all
     
+    if @current_user
+      @user_event_ids = UserEvent.where(:user_id => @current_user.id).all.pluck(:event_id)
+    end
     
     
     # Hmm... tbh, this event stuff shouldn't be here lol
