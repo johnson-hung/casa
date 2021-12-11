@@ -1,0 +1,28 @@
+<h2>User Sign Up</h2>
+
+<% if flash[:alert] %>
+  <%= flash[:alert] %> 
+<% end %>
+
+<h3>
+  Verify Your Information
+</h3>
+
+Name:
+<%= @current_user.account_name %>
+<br>
+Email:
+<%= @current_user.email %>
+<br>
+Research Interests:
+<% @current_user.research_interests.each do |ri|%>
+  <%= ri.field %>
+<% end %>
+<br>
+University:
+<%= @current_user.organization %>
+<br>
+
+<%= link_to 'Make Change', edit_user_path(@current_user), :class => 'btn btn-primary pull-right '  %>
+
+<%= button_to "Submit", controller: "events_signup", action: "create", event_id: params['event_id'], :form_class => 'btn btn-primary pull-right '%>
