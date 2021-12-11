@@ -15,19 +15,11 @@ class AnnouncementsController < ApplicationController
     when 'release_date'
       ordering,@date_header = {:release_date => :asc}, 'bg-warning hilite'
     end
-    @all_ratings = Announcement.all_ratings
-    @selected_ratings = params[:ratings] || session[:ratings] || {}
 
-    if @selected_ratings == {}
-      @selected_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]
-    end
-
-    if params[:sort] != session[:sort] or params[:ratings] != session[:ratings]
+    if params[:sort] != session[:sort]
       session[:sort] = sort
-      session[:ratings] = @selected_ratings
-      redirect_to :sort => sort, :ratings => @selected_ratings and return
     end
-    @announcements = Announcement.where(rating: @selected_ratings.keys).order(ordering)
+    @announcements = Announcement.all
     
     
     
@@ -83,7 +75,7 @@ class AnnouncementsController < ApplicationController
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def announcement_params
-    params.require(:announcement).permit(:title, :rating, :author, :description, :release_date)
+    params.require(:announcement).permit(:title, :author, :description, :release_date)
   end
 end
 
