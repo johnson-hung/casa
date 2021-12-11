@@ -28,7 +28,7 @@
 
 <h2>Announcements</h2>
 
-<%= form_tag announcements_path, :method => :get, :id => 'ratings_form' do %>
+<%= form_tag announcements_path, :method => :get do %>
   <%= hidden_field_tag "title_sort", true if @title_header %>
   <%= hidden_field_tag ":release_date_sort", true if @date_header %>
 <% end %>
@@ -116,7 +116,15 @@
         <td>
           <% if is_organizer %>
           <div class="text-center">
-            <%= link_to 'Edit', edit_event_path(event), :class => 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_event_path(event), :class => 'btn btn-outline-primary' %>
+          </div>
+          <% elsif current_user %>
+          <div class="text-center">
+            <% if @user_event_ids.include? event.id %>
+              <button type="button" class="btn btn-secondary" disabled>Joined</button>
+            <% else %>
+              <%= link_to 'Join', events_signup_path(event), :class => 'btn btn-outline-primary' %>
+            <% end %>
           </div>
           <% end %>
         </td>

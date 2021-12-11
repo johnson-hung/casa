@@ -14,6 +14,31 @@
   <h3>Check Sign-Up Info</h3>
   <!% Need MVC for event signup. Display the people that signed up here  %>
   
+
+ <table class="table table-striped col-md-12">
+  <thead>
+    <tr>
+      <th >
+        <%= "First Name" %>
+      </th>
+      <th >
+        <%=  "Last Name" %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @people.each do |person| %>
+    <tr>
+        <td>
+          <%= person.first_name %>
+        </td>
+        <td>
+          <%= person.last_name %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
   
   <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
 
