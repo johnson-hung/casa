@@ -33,7 +33,8 @@ class EventsController < ApplicationController
     @name = UserEvent.where("event_id = ?", params[:id]).to_a
     @x = @name.map{|x| x.user_id}
     @people = User.where(id: @x).to_a
-      
+    
+    
   end
 
   def update

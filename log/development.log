@@ -11606,3 +11606,292 @@ Processing by EventsController#edit as HTML
   Rendered events/edit.html.erb within layouts/application (2.6ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 23:00:19 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 23:00:20 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (45.3ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 366ms (Views: 313.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:00:22 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT "user_events".* FROM "user_events" WHERE (event_id = '1')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)[0m
+  Rendered events/edit.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 82ms (Views: 71.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 23:00:23 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 67ms (Views: 60.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:00:27 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.2ms)[0m  [1mSELECT "user_events".* FROM "user_events" WHERE (event_id = '1')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)
+  Rendered events/edit.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 23:00:28 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_flash.erb (1.4ms)
+Completed 200 OK in 70ms (Views: 65.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 23:03:06 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 68ms (Views: 63.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:03:07 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT "user_events".* FROM "user_events" WHERE (event_id = '1')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/edit.html.erb within layouts/application (44.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 79ms (Views: 74.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:03:08 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT "user_events".* FROM "user_events" WHERE (event_id = '1')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/edit.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 23:03:10 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 23:03:15 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 23:03:25 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:03:27 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT "user_events".* FROM "user_events" WHERE (event_id = '1')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)[0m
+  Rendered events/edit.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events/edit.html.erb:51: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+table = Event.all:0 # ";0" stops output.  Change...
+                  ^
+/home/ec2-user/environment/casa/app/views/events/edit.html.erb:53: syntax error, unexpected do (for block), expecting end
+CSV.open( file, 'w' ) do |writer|
+                      ^~
+/home/ec2-user/environment/casa/app/views/events/edit.html.erb:65: syntax error, unexpected end, expecting end-of-input
+'.freeze; end 
+          ^~~):
+  app/views/events/edit.html.erb:51: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+  app/views/events/edit.html.erb:53: syntax error, unexpected do (for block), expecting end
+  app/views/events/edit.html.erb:65: syntax error, unexpected end, expecting end-of-input
+  app/controllers/events_controller.rb:37:in `edit'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.7ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:03:32 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT "user_events".* FROM "user_events" WHERE (event_id = '1')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)
+  Rendered events/edit.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ec2-user/environment/casa/app/views/events/edit.html.erb:51: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+table = Event.all:0 # ";0" stops output.  Change...
+                  ^
+/home/ec2-user/environment/casa/app/views/events/edit.html.erb:53: syntax error, unexpected do (for block), expecting ')'
+CSV.open( file, 'w' ) do |writer|
+                      ^~
+/home/ec2-user/environment/casa/app/views/events/edit.html.erb:55: syntax error, unexpected do (for block), expecting ')'
+  table.each do |s|
+             ^~
+/home/ec2-user/environment/casa/app/views/events/edit.html.erb:57: syntax error, unexpected end, expecting ')'
+  end
+  ^~~
+/home/ec2-user/environment/casa/app/views/events/edit.html.erb:65: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+/home/ec2-user/environment/casa/app/views/events/edit.html.erb:67: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/casa/app/views/events/edit.html.erb:69: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  app/views/events/edit.html.erb:51: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+  app/views/events/edit.html.erb:53: syntax error, unexpected do (for block), expecting ')'
+  app/views/events/edit.html.erb:55: syntax error, unexpected do (for block), expecting ')'
+  app/views/events/edit.html.erb:57: syntax error, unexpected end, expecting ')'
+  app/views/events/edit.html.erb:65: syntax error, unexpected end, expecting ')'
+  app/views/events/edit.html.erb:67: syntax error, unexpected ensure, expecting ')'
+  app/views/events/edit.html.erb:69: syntax error, unexpected end, expecting ')'
+  app/controllers/events_controller.rb:37:in `edit'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:03:47 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT "user_events".* FROM "user_events" WHERE (event_id = '1')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/edit.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 23:03:50 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:03:52 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUserEvent Load (0.1ms)[0m  [1mSELECT "user_events".* FROM "user_events" WHERE (event_id = '1')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/edit.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 165.91.13.12 at 2021-12-11 23:08:57 +0000
+
+
+Started GET "/announcements" for 165.91.13.12 at 2021-12-11 23:08:57 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  SELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?  [["user_id", 17]]
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1mSELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events"
+  Rendered announcements/index.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 282ms (Views: 228.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/events/1/edit" for 165.91.13.12 at 2021-12-11 23:08:59 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserEvent Load (0.1ms)[0m  SELECT "user_events".* FROM "user_events" WHERE (event_id = '1')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (6, 7)[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/edit.html.erb within layouts/application (61.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 120.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/1" for 165.91.13.12 at 2021-12-11 23:09:00 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  Rendered events/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 165.91.13.12 at 2021-12-11 23:09:02 +0000
+Processing by AnnouncementsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "user_events"."event_id" FROM "user_events" WHERE "user_events"."user_id" = ?[0m  [["user_id", 17]]
+  [1m[35mAnnouncement Load (0.2ms)[0m  SELECT "announcements".* FROM "announcements" WHERE "announcements"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered announcements/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 1.1ms)
