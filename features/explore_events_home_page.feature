@@ -23,4 +23,28 @@ Scenario: see an event
   And I should see "ISCA"
   And I should see "New York"
   
+# #check if user signup for the event
+# Scenario: User signup for a event
+#   Given I am on the home page
+#   # might have to login in first
+#   Then I fill in "Email" with "mentor1@tamu.edu"
+#   And I fill in "Password" with "password"
+#   When I press "Log in"
+#   Then I should see "Login successful"
+#   And I am on the CALM home page
+  
+#   Then I should see "Join"
+#   When I press "Join"
+#   # need to add the path in paths.rb
+#   Then I should be on the event signup page 
+#   And I should see "Verify your info"
+#   When I press "Submit"
+#   Then I should see "Successfully signed up"
+#   And I am on the CALM home page
+#   And I should see "Joined"
+  
+#   When I click on the "Log out" button
+#   Then I should see "Successfully logged out"
+#   And I should not see "Joined"
+
 

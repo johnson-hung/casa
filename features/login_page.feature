@@ -189,6 +189,38 @@ Scenario: tryint to edit a random event
   
   # Given I am on the edit event page for "ISCA"
   # Then the "Name" field should contain "ISCA"
+
+# #check for event signup information should not appeared in regular user account
+# Scenario: Check user event sign up information in regular account
+#   Given I am on the user login page
+#   Then I fill in "Email" with "mentor1@tamu.edu"
+#   And I fill in "Password" with "password"
+#   When I press "Log in"
+#   Then I should see "Login successful"
+#   And I am on the CALM home page
+#   And I should see "My account"
+#   When I click on the "My account" button
+#   Then I am on the user account page for "mentor1@tamu.edu"
+#   And I should not see "User signup info"
+  
+# #check for event signup information appeared in organizer account
+# Scenario: Check user event sign up information in organizer account
+#   Given I am on the user login page
+#   Then I fill in "Email" with "organizer@tamu.edu"
+#   And I fill in "Password" with "organizer"
+#   When I press "Log in"
+#   Then I should see "Login successful"
+#   And I should see "Add Announcement"
+#   And I should see "Add Event"
+  
+#   When I click on the "Edit" button 
+#   Then I should see "Edit Existing Event"
+#   And I should see "Name"
+#   And I should see "Location"
+#   And I should see "Check Sign-Up Info"
+#   #check if specific user appears 
+#   And I shouls see "mentor1"
+  
   
   
   
