@@ -30,6 +30,7 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find params[:id]
+    @user_event = UserEvent.find params[:id]
   end
 
   def update

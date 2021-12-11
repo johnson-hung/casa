@@ -3,6 +3,7 @@ class EventsSignupController < ApplicationController
   
   def new
     @userEvent = UserEvent.new()
+    
   end
   
   def create

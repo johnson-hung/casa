@@ -14,6 +14,8 @@
   <h3>Check Sign-Up Info</h3>
   <!% Need MVC for event signup. Display the people that signed up here  %>
   
+ <!%= User.find(UserEvent.find_all(@event.id).user_id).first_name%>
+
   
   <%= link_to 'Export', events_path, :class => 'btn btn-success' %>
 
