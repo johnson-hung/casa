@@ -12,6 +12,19 @@ Background: announcements have been added to database
   | Announcement_2     | Name_2  | R      | 26-Oct-1984  |
   | Announcement_3     | Name_3  | R      | 21-Jul-1989  |
 
+  And the following events exist:
+  | name       | location   | start_at    | end_at       |
+  | ISCA       | New York   | 21-Jun-2000  | 21-Jun-2022  |
+  | HPCA       | Denver     | 21-Jun-2001  | 21-Jun-2025  |
+  | ASPLOS     | Seattle    | 21-Jun-2002  | 21-Jun-2032  |
+
+  And the following users exist:
+  | account_name    | password | first_name | last_name | organization | email           | phone      | mentor | mentee| organizer| 
+  | mentor1         | password | mentor1    | mentor1   | Texas A&M    |mentor1@tamu.edu | 1234567890 | 1      | 0     |          |
+  | mentor2         | password | mentor2    | mentor2   | Texas A&M    |mentor2@tamu.edu | 1234567890 | 1      | 0     |          |
+  | mentee1         | password | mentee1    | mentee1   | Texas A&M    |mentee1@tamu.edu | 1234567890 | 0      | 1     |          | 
+  | organizer       | organizer| organizer  | organizer | Texas A&M    |organizer@tamu.edu|1234567890 | 0      | 1     |1         |
+
   And I am on the CALM home page
   Then 3 seed announcements should exist
 
@@ -42,31 +55,26 @@ Scenario: Signup button is redirectable
   
   
 
-# Scenario: should not see 
+#check if user signup for the event
+Scenario: User signup for a event
+  Given I am on the user login page
+  # might have to login in first
+  Then I fill in "Email" with "mentor1@tamu.edu"
+  And I fill in "Password" with "password"
+  When I press "Log in"
+  # Then I should see "Login successful"
+  And I am on the CALM home page
+  And I should see "mentor1@tamu.edu"
+  
+  # Then I should see "Join"
+  When I am on the event page
+  And I should see "Starting Date"
+  And I should see "ISCA"
+  And I should see "Events"
+  # When I press "Joined"
+  And I should see "Join"
 
 
-#Scenario: sort movies alphabetically
-#  When I follow "Movie Title"
-#  # your steps here
-#  Then I should see "2001: A Space Odyssey" before "Aladdin"
-#  Then I should see "Aladdin" before "Amelie"
-#  Then I should see "Chicken Run" before "Chocolat"
-#  Then I should see "The Help" before "The Incredibles"
-#
-#Scenario: sort movies in increasing order of release date
-#  When I follow "Release Date"
-#  # your steps here
-#  Then I should see "More about 2001: A Space Odyssey" before "More about Raiders of the Lost Ark"
-#  Then I should see "More about The Terminator" before "More about When Harry Met Sally"
-#  Then I should see "More about Aladdin" before "More about Chicken Run"
-#  Then I should see "More about Raiders of the Lost Ark" before "More about Chocolat"
-#
-#
-#Scenario: filter and sort a movie by release date
-#  Given I am on the home page
-#  When I uncheck the following ratings: PG-13, NC-17, R
-#  And I should see "Aladdin"
-#  When I follow "Release Date"
-#  Then I should see "Raiders of the Lost Ark" before "Aladdin"
-#  When I follow "Release Date"
-#  Then I should see "More about Raiders of the Lost Ark" before "More about Aladdin"
+
+
+

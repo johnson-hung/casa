@@ -49,6 +49,23 @@ module NavigationHelpers
     when /^the user login page$/
       login_path
       
+    when /^the user account page for \"(.+)\"$/
+      edit_user_path($1)
+    
+    when /^the edit event page for "(.+)"$/
+      # edit_event_path(Event.find_by(:name => $1))
+      event = Event.find_by(name: $1)
+      edit_event_path(event)
+    
+    when /^the event signup page for "(.+)"$/
+      event = Event.find_by(name: $1)
+      events_signup_path(event)
+      
+    when /^the event page$/
+      events_path
+    
+    # when /^the edit announcement page for \"(.+)\"$/
+    #   edit_event_path($1)
 
     else
       begin

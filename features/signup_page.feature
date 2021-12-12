@@ -22,7 +22,6 @@ Scenario: see an sign up information
 Scenario: No information entered
   Given I am on the user Signup page
   When I press "Submit"
-  And I check "machine learning"
   Then I should not see "Successfully created account"
   Then I should see "Password can't be blank"
   Then I should see "Account name can't be blank"
