@@ -190,39 +190,54 @@ Scenario: tryint to edit a random event
   # Given I am on the edit event page for "ISCA"
   # Then the "Name" field should contain "ISCA"
 
-# #check for event signup information should not appeared in regular user account
-# Scenario: Check user event sign up information in regular account
+#check for event signup information should not appeared in regular user account
+Scenario: Check user event sign up information in regular account
+  Given I am on the user login page
+  Then I fill in "Email" with "mentor1@tamu.edu"
+  And I fill in "Password" with "password"
+  When I press "Log in"
+  Then I should see "Login successful"
+  And I am on the CALM home page
+  And I should see "My account"
+  When I click on the "My account" button
+  Then I am on the user account page for "mentor1@tamu.edu"
+  And I should not see "Organizer"
+  
+
+  
+  
+# #check if user signup for the event
+# Scenario: User signup for a event
 #   Given I am on the user login page
+#   # might have to login in first
 #   Then I fill in "Email" with "mentor1@tamu.edu"
 #   And I fill in "Password" with "password"
 #   When I press "Log in"
 #   Then I should see "Login successful"
 #   And I am on the CALM home page
-#   And I should see "My account"
-#   When I click on the "My account" button
-#   Then I am on the user account page for "mentor1@tamu.edu"
-#   And I should not see "User signup info"
+#   And I should see "mentor1@tamu.edu"
   
-# #check for event signup information appeared in organizer account
-# Scenario: Check user event sign up information in organizer account
-#   Given I am on the user login page
-#   Then I fill in "Email" with "organizer@tamu.edu"
-#   And I fill in "Password" with "organizer"
-#   When I press "Log in"
-#   Then I should see "Login successful"
-#   And I should see "Add Announcement"
-#   And I should see "Add Event"
+#   # Then I should see "Join"
+#   When I am on the event page
+#   And I should see "Starting Date"
+#   And I should see "ISCA"
+#   And I should see "Events"
+#   # When I press "Joined"
+#   And I should see "Join"
+#   # When I click on the "Join" button
   
-#   When I click on the "Edit" button 
-#   Then I should see "Edit Existing Event"
-#   And I should see "Name"
-#   And I should see "Location"
-#   And I should see "Check Sign-Up Info"
-#   #check if specific user appears 
-#   And I shouls see "mentor1"
+#   # need to add the path in paths.rb
+#   Then I should be on the event signup page 1
   
+#   And I should see "Verify your info"
+#   When I press "Submit"
+#   Then I should see "Successfully signed up"
+#   And I am on the CALM home page
+#   And I should see "Joined"
   
-  
+#   When I click on the "Log out" button
+#   Then I should see "Successfully logged out"
+#   And I should not see "Joined"
   
   
   
