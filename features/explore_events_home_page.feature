@@ -18,7 +18,12 @@ Background: events have been added to database
   | mentor2         | password | mentor2    | mentor2   | Texas A&M    |mentor2@tamu.edu | 1234567890 | 1      | 0     |          |
   | mentee1         | password | mentee1    | mentee1   | Texas A&M    |mentee1@tamu.edu | 1234567890 | 0      | 1     |          | 
   | organizer       | organizer| organizer  | organizer | Texas A&M    |organizer@tamu.edu|1234567890 | 0      | 1     |1         |
-
+  
+  # And the following user signup exist:
+  # |first_name | last_name|
+  # | philip    | shih     |
+  
+  
 
   And I am on the CALM home page
   Then 3 seed events should exist
@@ -48,4 +53,40 @@ Scenario: Check user event sign up information in organizer account
   And I should see "Location"
   And I should see "Check Sign-Up Info"
   # #check if specific user appears 
-  # And I shouls see "mentor1"
+  # And the "First Name" field should contain "philip"
+  # And I should see "philip"
+  And the signup should include "philip"
+
+
+#check if user signup for the event
+Scenario: User signup for a event (view)
+  Given I am on the user login page
+  # might have to login in first
+  Then I fill in "Email" with "mentor1@tamu.edu"
+  And I fill in "Password" with "password"
+  When I press "Log in"
+  Then I should see "Login successful"
+  And I am on the CALM home page
+  And I should see "mentor1@tamu.edu"
+  
+  # Then I should see "Join"
+  When I am on the event page
+  And I should see "Starting Date"
+  And I should see "ISCA"
+  And I should see "Events"
+  # When I click on the "Join" button
+  
+# Scenario: user signup for an event (action)
+#   Given I am on the event signup page for "ISCA"
+#   # need to add the path in paths.rb
+
+#   Then I should see "Verify your info"
+#   When I press "Submit"
+#   Then I should see "Successfully signed up"
+#   And I am on the CALM home page
+#   And I should see "Joined"
+  
+#   When I click on the "Log out" button
+#   Then I should see "Successfully logged out"
+#   And I should not see "Joined"
+  

@@ -29,6 +29,15 @@ Given /the following users exist/ do |users_table|
   # fail "Unimplemented"
 end
 
+# Given /the following user signup exist/ do |users_table|
+Then /the signup should include "([^"]*)"$/ do |name|
+  # event = Event.find_by(name: "ISCA")
+  user = User.find_by(first_name: name)
+  userevent = UserEvent.find_by(user)
+  # UserEvent.create!(userevent)
+end
+
+
 Then /(.*) seed announcements should exist/ do | n_seeds |
   # Movie.count.should be n_seeds.to_i
   expect(Announcement.count).to eq n_seeds.to_i
