@@ -6,10 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-announcements = [{:title => 'Announcement_1', :author => 'Name_1', :rating => 'G', :release_date => '25-Nov-1992'},
-    	  {:title => 'Announcement_2', :author => 'Name_2', :rating => 'R', :release_date => '26-Oct-1984'},
-    	  {:title => 'Announcement_3', :author => 'Name_3', :rating => 'R', :release_date => '21-Jul-1989'},
-  	 ]
+announcements = [{:title => 'Announcing MaSS/MaSA at ISCA 2022!', :author => 'Organizer 1', :release_date => '13-Dec-2021'},
+           {:title => 'Sign up for the CALM pilot program for 2022', :author => 'Organizer 2', :release_date => '26-Oct-2021'}, 
+           {:title => 'Learn more about the CALM pilot program at MICRO 2021', :author => 'Organizer 1', :release_date => '21-Sep-2021'},  	 
+           {:title => 'Sign up for MaSS/MaSA at MICRO 2021 by today!', :author => 'Organizer 2', :release_date => '20-Sep-2021'},  	 
+]
 
 announcements.each do |announcement|
   Announcement.create!(announcement)
@@ -26,9 +27,9 @@ end
 # end
 
 events = [
-        {:name => 'ISCA', :location  => 'New York', :start_at => '21-Jun-2000', :end_at => '21-Jun-2022'},
-        {:name => 'HPCA', :location  => 'Denver', :start_at => '21-Jun-2001', :end_at => '21-Jun-2025'},
-        {:name => 'ASPLOS', :location  => 'Seattle', :start_at => '21-Jun-2002', :end_at => '21-Jun-2032'},
+        {:name => 'ISCA', :location  => 'New York', :start_at => '21-May-2021', :end_at => '21-Jun-2022'},
+        {:name => 'ASPLOS', :location  => 'Seattle', :start_at => '14-Apr-2021', :end_at => '21-Apr-2021'},
+        {:name => 'HPCA', :location  => 'Denver', :start_at => '21-Feb-2021', :end_at => '28-Feb-2021'},
     ]
 
 events.each do |event|
